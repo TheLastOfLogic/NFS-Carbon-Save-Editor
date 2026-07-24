@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Compressor NFS Carbon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|f:\\compressor nfs carbon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|f:\\compressor nfs carbon\\x86 jdlz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:x86 jdlz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|F:\\Compressor NFS Carbon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "x86 JDLZ.cs",
+              "DocumentMoniker": "F:\\Compressor NFS Carbon\\x86 JDLZ.cs",
+              "RelativeDocumentMoniker": "x86 JDLZ.cs",
+              "ToolTip": "F:\\Compressor NFS Carbon\\x86 JDLZ.cs",
+              "RelativeToolTip": "x86 JDLZ.cs",
+              "ViewState": "AgIAAOECAAAAAAAAAADwv/sCAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T01:08:04.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\Compressor NFS Carbon\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "F:\\Compressor NFS Carbon\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:32:29.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "F:\\Compressor NFS Carbon\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\JMIGH\\source\\repos\\Compressor NFS Carbon\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:32:10.488Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

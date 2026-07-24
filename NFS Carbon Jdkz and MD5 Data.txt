@@ -1,0 +1,615 @@
+nfs carbon md5
+
+
+82c64fef byte 01 for debug menu
+
+
+1701EF508 buffer here length is 0xFFF0
+
+
+JDLZ Compressor Xbox 360 Address
+82460118 normal  82460254 collectors edition
+
+821f1f9c this is the function to unlock all levels
+
+
+
+
+debugging address 1AB031AD0
+
+Performance Parts
+				Engine
+				Stage 1
+-stock			92037DAC	
+-Street Package 92037DAD
+-Pro Package	92037DAE
+
+				Stage 2
+-stock			920381ED
+-Street Package	920381EE
+-Pro Package	920381EF
+
+				Stage 3
+-stock			9203862E
+-Street Package	9203862F
+-Pro Package	92038630
+-Racing Package	92038631
+				
+				
+				Transmission
+				Stage 1
+-Stock			8C41C400
+-Street Package	8C41C401
+-Pro Package	8C41C402
+
+				Stage 2
+-Stock			8C41C841
+-Street Package	8C41C842
+-Pro Package	8C41C843
+
+				Stage 3
+-Stock			8C41CC82
+-Street Package	8C41CC83
+-Pro Package	8C41CC84
+-Racing Package	8C41CC85
+
+				Suspension
+				Stage 1
+-Stock			3C92A391
+-Street Package	3C92A392
+-Pro Package	3C92A393
+
+				Stage 2
+-Stock			3C92A7D2
+-Street Package 3C92A7D3
+-Pro Package	3C92A7D4
+
+				Stage 3
+-Stock			3C92AC13
+-Street Package	3C92AC14
+-Pro Package	3C92AC15
+-Racing Package	3C92AC16
+				
+				Nitrous
+				Stage 1
+-Stock			EB637DE6
+-Street Package EB637DE7
+-Pro Package	EB637DE8
+-Racing Package EB637DE9
+
+				Stage 2
+-Stock			EB638227
+-Street Package	EB638228
+-Pro Package	EB638229
+-Racing Package	EB63822A
+
+				Stage 3
+-Stock			EB638668
+-Street Package	EB638669
+-Pro Package	EB63866A
+-Racing Package	EB63866B
+
+				Tires
+				Stage 1
+-Stock			FC612CDD
+-Street Package	FC612CDE
+-Pro Package	FC612CDF
+
+				Stage 2
+-Stock			FC61311E
+-Street Package	FC61311F
+-Pro Package	FC613120
+
+				Stage 3
+-Stock			FC61355F
+-Street Package FC613560
+-Pro Package	FC613561
+-Racing Package	FC613562
+
+				Brakes
+				Stage 1
+-Stock			543DF3EE
+-Street Package	543DF3EF
+-Pro Package	543DF3F0
+
+				Stage 2
+-Stock			543DF82F
+-Street Package	543DF830
+-Pro Package	543DF831
+
+				Stage 3
+-Stock			543DFC70
+-Street Package	543DFC71
+-Pro Package	543DFC72
+-Racing Package	543DFC73
+
+
+				SuperCharger / Turbo
+				Stage 1
+-stock			97D4AC83
+-street Package	97D4AC84
+-Pro Package	97D4AC85
+
+				Stage 2
+-stock			97D4B0C4
+-Street Package	97D4B0C5
+-Pro Package	97D4B0C6
+
+				Stage 3
+-stock 			97D4B505
+-street Package 97D4B506
+-Pro Package 	97D4B507
+-Racing Package 97D4B508
+
+
+Paint
+-Gloss		BEE5AC6B
+-Metallic	BEE5AC6C
+-Pearl		BEE5AC6D
+-Matte		BEE5AC6E
+-Crome		BEE5AC6F
+-Iridescent	BEE5AC70
+-Candy		BEE5AC71
+
+Wheel Paint
+
+-Metallic	0EC591F3
+-Matte		0EC591F5
+-Crome		0EC591F6
+
+
+AutoSculpt
+										Wheels
+-Carbon MO5								8877780D								
+-Carbon Hex								8877780E
+-Carbon Redline							8877780F
+-Carbon Glitz							88777810
+-Carbon St-8							88777811
+-Carbon Multi							88777812
+-Carbon SF15							88777813
+-Carbon Razor							88777814
+-Carbon St-5							88777815
+
+										Front Bumper
+-Stag									0CABE990
+-Speedway								AB6D7CF7
+-G-Force								E6ADB698
+-SlipStream								702D4356
+-Classic								74B31DB0
+-Sweeper								47EC2331
+-Shadow									832C5CD2
+-Borrillo								BE6C9673
+-Arashi									F9ACD014
+-Chicane								34ED09B5
+
+										Rear Bumper
+-Stag									348B7B51
+-Speedway								6024BDD8
+-G-Force								AF83C759
+-SlipStream								10C5B457
+-Classic								206CAB71
+-Sweeper								83EA84D2
+-Shadow									D3498E53
+-Borrillo								22A897D4
+-Arashi									7207A155
+-Chicane								C166AAD6
+
+										Skirt
+-Stag									40D7908A	
+-Speedway								5BAF39D1
+-G-Force								A8A97692
+-SlipStream								0EB4FD10
+-Classic								E01F28AA
+-Sweeper								8DD1CD4B
+-Shadow									DACC0A0C
+-Borrillo								27C646CD
+-Arashi									74C0838E
+-Chicane								C1BAC04F
+
+										Hood
+-Dual Stage								96BC34D7
+-Blown Over								6E42CEDF
+-Splitside								6E42CEE0
+-Snyper									6E42CEE1
+-Charged								6E42CEE2
+-Contender								6E42CEE3
+-Shaker									6E42CEE4
+-Formula								6E42CEE5
+
+										Spoilers are shared
+										
+										Roof Scoops are also Shared
+										
+										Exhaust Tips
+-Backlash								D8945DC7
+-Livia									D8945DC8
+-Ace									D8945DC9
+-Vortex									D8945DCA
+-Frenzy									D8945DCB
+-Blast									D8945DCC
+-Rumble									D8945DCD
+-Thunderbolt							D8945DCE
+-Rocket									D8945DCF
+-Sonic									EB2016D7
+-Supernova								EB2016D8
+-Blitz									EB2016D9
+-Force									EB2016DA
+-Pulse									EB2016DB
+-Velocity								EB2016DC
+-Speed									EB2016DD
+-Sport									EB2016DE
+
+After Market 
+										Body Kit
+-Body 1									9FA9D8A3
+-Body 1									9FA9D8A4 Tier 1/2
+-Body 2									9FA9D8A5
+-Body 3									9FA9D8A6 //BodyKit 4 for Tier1
+-Body 4									9FA9D8A7
+
+										Hood
+										
+										Normal
+-Beast									96BC34CF
+-Double-V								96BC34D0
+-Tri_Slot								96BC34D1
+-Speed									96BC34D2
+-G-Force								96BC34D3
+-Overdial								96BC34D4
+-Trident								96BC34D5
+-Speedline								96BC34D6
+
+										Carbon Fibre
+-Beast CF								0A3C4B77
+-Double-V CF							0A3C4B78
+-Tri_Slot CF							0A3C4B79
+-Speed CF								0A3C4B7A
+-G-Force CF								0A3C4B7B
+-Overdial CF							0A3C4B7C
+-Trident CF								0A3C4B7D
+-Speedline CF							0A3C4B7E
+
+
+										Roof Scoop
+										
+										Normal
+-Northwest								AE0FD39B
+-Jetstream								AE0FD39C
+-Headwind								AE0FD39D
+-Riptide								AE0FD39F
+-Windtunnel								AE0FD3A3
+-Blastback								700A472B
+-Airstream								700A472C
+-Cyclone								700A472F
+-Tempest								700A4730
+-Backdraft								700A4732
+-Typhoon								700A4733
+-Northwest Dual							70592060
+-Jetstream Dual							72AE4901
+-Headwind Dual							750371A2
+-Riptide Dual							79ADC2E4
+-Windtunnel Dual						83026568
+-Blastback Dual							0FBA4DF0
+-Airstream Dual							120F7691
+-Cyclone Dual							190EF074
+-Tempest Dual							1B641915
+-Backdraft Dual							200E6A57
+-Typhoon Dual							226392F8
+
+										Carbon Fibre
+-Northwest CF							9BB98EC3
+-Jetstream CF							9BBA1B24
+-Headwind CF							9BBAA785
+-Riptide CF								9BBBC047
+-Windtunnel CF							9BBDF1CB
+-Blastback CF							12D21853
+-Airstream CF							12D2A4B4
+-Cyclone CF								12D449D7
+-Tempest								12D4D638
+-Backdraft CF							12D5EEFA
+-Typhoon CF								12D67B5B
+-Northwest CF Dual						E19E1488
+-Jetstream CF Dual						561A8589
+-Headwind CF Dual						CA96F68A
+-Riptide CF Dual						B38FD88C
+-Windtunnel CF Dual						85819C90
+-Blastback CF Dual						6A5B1818
+-Airstream CF Dual						DED78919
+-Cyclone CF Dual						3C4CDC1C
+-Tempest CF Dual						B0C94D1D
+-Backdraft CF Dual						99C22F1F
+-Typhoon CF Dual						0E3EA020
+
+
+										Spoiler
+										
+										Normal
+-Jorgen									022A40C3
+-Rocker 5								022A40C4
+-Airforce								022A40C5
+-Arrow									022A40C6
+-Barracuda								022A40C7
+-Wildfire								022A40C8
+-Ripper									022A40C9
+-Reaper									022A40CA
+-Borra									022A40CB
+-Ghost									47725953
+-Dragon									47725954
+-Scarab									47725955
+-Tandem									47725956
+-Lynx									47725957
+-Banshee								47725958
+-Mystic									47725959
+-Specter								4772595A
+-Slingshot								4772595B
+-Tornado								4772595c
+-Venom									47725974
+-Switchblade							47725975
+-Sidewinder								47725976
+-Impact									47725977
+-Groundmaster							47725978
+-Dynamo									47725979
+-Joker									4772597A
+-Phoenix								4772597B
+-Fishtail								4772597C
+-Viper									4772597D
+
+										Carbon Fibre
+-Jorgen CF								ED6ECAEB
+-Rocker 5 CF							ED6F574C
+-Airforce CF							ED6FE3AD
+-Arrow CF								ED70700E
+-Barracuda CF							ED70FC6F
+-Wildfire CF							ED7188D0
+-Ripper CF								ED721531
+-Reaper CF								ED72A192
+-Borra CF								ED732DF3
+-Ghost CF								9B2ED97B
+-Dragon CF								9B2F65DC
+-Scarab CF								9B2FF23D
+-Tandem CF								9B307E9E
+-Lynx CF								9B310AFF
+-Banshee CF								9B319760
+-Mystic CF								9B3223C1
+-Specter CF								9B32B022
+-Slingshot CF							9B333C83
+-Tornado CF								9B33C8E4
+-Venom CF								9B40F1FC
+-Switchblade CF							9B417E5D
+-Sidewinder CF							9B420ABE
+-Impact CF								9B42971F
+-Groundmaster CF						9B432380
+-Dynamo CF								9B43AFE1
+-Joker CF								9B443C42
+-Phoenix CF								9B44C8A3
+-Fishtail CF							9B455504
+-Viper CF								9B45E165
+
+
+										Wheels Complete Sets
+
+-5ZIGEN FN01R							3DF7486B 
+-5ZIGEN SUPERSIX						3DF7486C 
+-5ZIGEN 5ZR								3DF7486D 
+-5ZIGEN GN+								3DF7486E
+-5ZIGEN GRAVIS 1						3DF7486F
+-ADR ADRENALINE							285C5650
+-ADR EMPIRE								285C5651
+-ADR GT-SPORT							285C5652
+-ADR M SPORT							285C5653
+-AD SOKUDO8								285C5654
+-AMERICAN RACING SHELBY RAZOR			854F11D9
+-AMERICAN RACING TORQ-THRUST II			854F11DA
+-AMERICAN RACING TORQ-THRUST ST			854F11DB
+-LOWENHART XIR							B0395F6D
+-LOWENHART BRS							B0395F6E
+-LOWENHART LDR							B0395F6F
+-LOWENHART LC1							B0395F70
+-O.Z. SUPERLEGGERA						47129AA2
+-O.Z. SUPERTURISMO						47129AA3
+-O.Z. OPERA								47129AA4
+-O.Z. SUPERLEGGERA III					47129AA5
+-O.Z. LEONARDO							47129AA6
+-RACINGHART MULTI C4					D54AFEDC
+-RACINGHART CX							D54AFEDD
+-RACINGHART CP							D54AFEDE
+-RACINGHART CR							D54AFEDF
+-RO_JA FORMULA 1						5C510405
+-RO_JA FORMULA 7						5C510406
+-RO_JA FORMULA 2						5C510407
+-TENZO PSYCHO							69684169
+-TENZO RS-5								6968416A
+-TENZO SHU 10							6968416B
+-GIOVANNA BRAKE							283CAA8C
+-GIOVANNA GELLO							283CAA8D
+-GIOVANNA ARARAT						283CAA8E
+-HRE 943R								28E277D8
+-HRE 541R								28E277D9
+-HRE 549R								28E277DA
+-IFORGED AERO							89198899
+-IFORGED EVOLUTION						8919889A
+-IFORGED MARQUIS						8919889B
+-KONIG BLATANT							CBE64071
+-KONGIG IMAGINE							CBE64072
+-KONGIG THEORY							CBE64073
+-BBS GT									286D5A50
+-BBS RS GT								286D5A51
+-BBS LM									286D5A52
+-BBS CH									286D5A53
+-BBS RK									286D5A54
+-BBS RX									286D5A55
+-CENTER LINE DAGGER						470BCA88
+-CENTER LINE INDY						470BCA89
+-CENTER LINE RETRO						470BCA8A
+-CENTER LINE VIKING						470BCA8B
+-ENKEI NT03+M							FB7B38C5
+-ENKEI J SPEED 3						FB7B38C6
+-ENKEI ES-TARMAC						FB7B38C7
+-ENKEI WRC TARMAC						FB7B38C8
+-TSW MONDELLO							29BC76D7
+-TSW ROCKET 5							29BC76D8
+-TSW LAGUNA								29BC76D9
+-VOLK TE37								65A6E9D5
+-VOLK CE28								65A6E9D6
+-VOLK GT-P								65A6E9D7
+-WORK VS SS								67FF5CBC
+-WORK VS-KF								67FF5CBD
+-WORK EUROLINE S2H						67FF5CBE
+-WORK EUROLINE FE						67FF5CBF
+		
+
+
+
+All Vinyls
+Flames 996465D3
+Tribal 996465D4
+Stripes 996465D5
+Race Flags 996465D6
+National Flag 996465D7
+Numbers 996465D8
+Shapes 996465D9
+Body 996465DA
+Flame Body 996465DB
+Stripe Body 996465DC
+Tribal Body C5F12084
+Two Tone C5F12085
+Manufacturer C5F12086
+Aftermarket C5F12087
+Special C5F12088
+Logo C5F1208A
+Camouflage C5F1208B
+Pinstripes C5F1208C
+				Bonus 
+- Pet 1			79B7FFBF
+- Pet 2			B0B7F7D1
+- Pet 3			B0B7F7D2
+- Pet 4			B0B7F7D3
+- Pet 5			B0B7F7D4
+- NFS Carbon 1	B0AFFD67
+- NFS Carbon 2	C7708D4E
+- NFS Carbon 3	B0B938BC
+- NFS Carbon 4 	C7EE93E7
+- NFS Carbon 5	C7FCD97E
+- Soccer Ball	B0B03891
+- Cardboard Box	03B03C5B
+- Honeycomb		C72B92F9
+- Driver		B0B99AA3
+- Pharrell		A4107C79
+- 21st Street	70F46603
+- Bushido		C8D6AD51
+- Stacked Deck	464F7478
+- TFK			C5C40E88
+- Dragon		02BE3A3E
+- Skeleton		71E356E8
+- Leopard		0F8D117D
+- Burnout		76453AD3
+
+Stock			C5F120A5
+
+				Online
+-Mooo!			79B7C9BF
+-Tartan			C7A0F120
+-Black Hearts	B4277C66
+-Los Colibris	F1CB205A
+-Kings			EEB55CE2
+-Inferno		D26D7E14
+-Rotor4			233AB70D
+-Scorpios		5CC5E5E3
+				Virus
+-Knockout Fever	89DDDCBC
+-Canyon Craze	9A560CD3
+-Pursuit Pandemic 5614AE93
+-Carbon Plague BB7DA0E9
+
+
+Window Tint
+				Light
+-Black 			89946400
+-Silver			E398A5B8
+-Red			803EB1BE
+-Yellow			F14F0E3F
+-Green			89F23A14
+-Blue			880C43AB
+-Indigo			CC9AEFDD
+-Violet			EA999A36
+				Dark
+-Black 			D68EA0C1
+-Silver			CFDA7A99
+-Red			8050CA3F
+-Yellow			DD90E320
+-Green			D6EC76D5
+-Blue			8A616C4C
+-Indigo			B8DCC4BE
+-Violet			D6DB6F17
+				Pearl
+-Black 			FD1A4DD5
+-Silver			C7DBCA2D
+-Red			5C262253
+-Yellow			D59232B4
+-Green			FD7823E9
+-Blue			E0E1C6E0
+-Indigo			B0DE1452
+-Violet			CEDCBEAB
+
+unlock all worlds 
+82c6503c set to 1
+
+Collectors edition Enabled
+82c65040 0x01
+
+Special Category
+8231ea54 40 9a 00 c8     bne        cr6,LAB_8231eb1c nop to allow all vehicles
+8231ea68 40 9a 00 b4     bne        cr6,LAB_8231eb1c nop to allow all vehicles
+
+
+8231ea80 41 9a 00 9c     beq        nop to show
+8231ea88 41 9a 00 94     beq       nop to show Special Category
+
+Collitions\
+
+824a7428 ec 00 03 72 OG Multiply Weight with 100 or nop and keep og weight
+
+8264e5fc 20 de 00 02     subfic     r6,r30,0x2
+
+8264e6ac lbz r9,0x0(R11)
+8264e6b0 cmli 0,r9,0
+8264E2C0 897E0008 OG Show hidden Cards before selection nop to show them. there is a cmp further down ro either R11 has to be set to 0 or 1 for this to work or possably nop
+8264E5AC 892B0000 shows at the bottom how many are left //set 8264e590 li R10 = 6
+8264e5fc 20 de 00 02     subfic     r6,r30,0x2
+8264E620 890a0000 //i think just waits for tally to be over 8264e608 li R11 = 6
+8264e648
+
+
+8264dba4 == 84E0C4 //number you can spin
+8264dcfc == 84E1F9
+8267b80c == 84df0a //number before you get kicked out
+8264de0c == 84DF0A  and 8264dd68   8267b80c true address for this?
+8264dd68 == 84E24C //how many tiles can flip
+
+
+8267b80c
+8267b7ec
+
+
+
+
+MW
+
+Remove Limiter
+82414940 d0 03 00 dc nop to take effect
+
+// Force Black Edition
+	182a2ce06 = 1
+
+
+
+//unlock all
+182a2ce00 = 1
+
+
+Finding Reward cards
+82586868 is the equilvalent to 7B3D7D
+82586998 is the equilvalent to 7B3E19 82586e64 maybe here?  82586998 try here
+
+825870f0 is the equilvalent to 7A7A3C
+8258716c is the equilvalent to 7A7ABE

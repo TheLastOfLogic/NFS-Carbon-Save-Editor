@@ -1,0 +1,226 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\nfs carbon\\read_data_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon\\read_data_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\nfs carbon\\reading_car_data_to_ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon\\reading_car_data_to_ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Career OverAll Stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:Career OverAll Stats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\profile editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:profile editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\preset_rider_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:preset_rider_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\cars enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:cars enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\nfs carbon\\parts_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon\\parts_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\save_game_structure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:save_game_structure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\platform car converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:platform car converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\nfs carbon\\22114455 builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon\\22114455 builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\nfs carbon jdkz and md5 data.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon jdkz and md5 data.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\logic\\source\\repos\\ea md5 hasher\\nfs carbon\\rebuild 11224455.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon\\rebuild 11224455.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Career OverAll Stats.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Career OverAll Stats.cs",
+              "RelativeDocumentMoniker": "Career OverAll Stats.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Career OverAll Stats.cs",
+              "RelativeToolTip": "Career OverAll Stats.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:29:59.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Profile Editor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Profile Editor.cs",
+              "RelativeDocumentMoniker": "Profile Editor.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Profile Editor.cs [Design]",
+              "RelativeToolTip": "Profile Editor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:28:13.234Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Cars Enum.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Cars Enum.cs",
+              "RelativeDocumentMoniker": "Cars Enum.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Cars Enum.cs",
+              "RelativeToolTip": "Cars Enum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T16:32:38.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NFS Carbon Jdkz and MD5 Data.txt",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon Jdkz and MD5 Data.txt",
+              "RelativeDocumentMoniker": "NFS Carbon Jdkz and MD5 Data.txt",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon Jdkz and MD5 Data.txt",
+              "RelativeToolTip": "NFS Carbon Jdkz and MD5 Data.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-07-05T08:15:15.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Preset_Rider_List.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Preset_Rider_List.cs",
+              "RelativeDocumentMoniker": "Preset_Rider_List.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Preset_Rider_List.cs",
+              "RelativeToolTip": "Preset_Rider_List.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAH4DAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T09:00:12.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Platform Car Converter.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Platform Car Converter.cs",
+              "RelativeDocumentMoniker": "Platform Car Converter.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Platform Car Converter.cs",
+              "RelativeToolTip": "Platform Car Converter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T19:00:00.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Save_Game_Structure.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Save_Game_Structure.cs",
+              "RelativeDocumentMoniker": "Save_Game_Structure.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\Save_Game_Structure.cs",
+              "RelativeToolTip": "Save_Game_Structure.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAnwBwAAAClAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T15:40:22.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Read_Data_Table.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\Read_Data_Table.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\Read_Data_Table.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\Read_Data_Table.cs",
+              "RelativeToolTip": "NFS Carbon\\Read_Data_Table.cs",
+              "ViewState": "AgIAAFAFAAAAAAAAAAAmwF8FAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T11:01:32.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Rebuild 11224455.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\Rebuild 11224455.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\Rebuild 11224455.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\Rebuild 11224455.cs",
+              "RelativeToolTip": "NFS Carbon\\Rebuild 11224455.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwEoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T19:34:20.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "22114455 Builder.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\22114455 Builder.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\22114455 Builder.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\22114455 Builder.cs",
+              "RelativeToolTip": "NFS Carbon\\22114455 Builder.cs",
+              "ViewState": "AgIAAEECAAAAAAAAAAAIwAoCAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T21:33:13.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Reading_Car_Data_To_UI.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\Reading_Car_Data_To_UI.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\Reading_Car_Data_To_UI.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\Reading_Car_Data_To_UI.cs",
+              "RelativeToolTip": "NFS Carbon\\Reading_Car_Data_To_UI.cs",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAmwFEBAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T01:14:05.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Parts_List.cs",
+              "DocumentMoniker": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\Parts_List.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\Parts_List.cs",
+              "ToolTip": "C:\\Users\\Logic\\source\\repos\\EA MD5 hasher\\NFS Carbon\\Parts_List.cs",
+              "RelativeToolTip": "NFS Carbon\\Parts_List.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAADsjQIAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T23:10:56.907Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
