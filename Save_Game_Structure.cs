@@ -162,16 +162,16 @@ namespace EA_MD5_hasher
 
             // 2. Read the Next Link (which is at Address + 2)
             // We use our Big Endian helper here
-            ushort nextLink = Helper_Functions.ReadUInt16(Data, currentAddress + 2, Save_Form.Xbox_360);
+            ushort nextLink = Helper_Functions.ReadUInt16(Data, currentAddress + 2, Profile_Editor.Xbox_360);
             Custimization_1 c = new Custimization_1();
-            //UInt16 Part_ID = Helper_Functions.ReadUInt16(Data, currentAddress, Save_Form.Xbox_360);
+            //UInt16 Part_ID = Helper_Functions.ReadUInt16(Data, currentAddress, Profile_Editor.Xbox_360);
             while (nextLink != 0xFFFF)
             {
                 // Move to the next link's address
                 currentAddress = (nextLink * 4) + Base_Address;
 
                 // Read the link for the next iteration
-                nextLink = Helper_Functions.ReadUInt16(Data, currentAddress + 2, Save_Form.Xbox_360);
+                nextLink = Helper_Functions.ReadUInt16(Data, currentAddress + 2, Profile_Editor.Xbox_360);
 
                 count++;
 
@@ -188,10 +188,10 @@ namespace EA_MD5_hasher
             Car[] car = new Car[200];
             for (int Count = 0, i = 0; i < 200; i++, Count += 0x14)
             {
-                car[i].ID = Helper_Functions.ReadUInt32(Data, Pos + Count, Save_Form.Xbox_360);
-                car[i].Front_End_Car_ID = Helper_Functions.ReadUInt32(Data, Pos + Count + 4, Save_Form.Xbox_360);
-                car[i].Car_Model = Helper_Functions.ReadUInt32(Data, Pos + Count + 8, Save_Form.Xbox_360);
-                car[i].Flags = Helper_Functions.ReadUInt32(Data, Pos + Count + 0xC, Save_Form.Xbox_360);
+                car[i].ID = Helper_Functions.ReadUInt32(Data, Pos + Count, Profile_Editor.Xbox_360);
+                car[i].Front_End_Car_ID = Helper_Functions.ReadUInt32(Data, Pos + Count + 4, Profile_Editor.Xbox_360);
+                car[i].Car_Model = Helper_Functions.ReadUInt32(Data, Pos + Count + 8, Profile_Editor.Xbox_360);
+                car[i].Flags = Helper_Functions.ReadUInt32(Data, Pos + Count + 0xC, Profile_Editor.Xbox_360);
                 car[i].Customization_Slot_Number = Data[Pos + Count + 0x10];
                 car[i].Career_Slot = Data[Pos + Count + 0x11];
                 if (BE == true)
@@ -218,8 +218,8 @@ namespace EA_MD5_hasher
                 if (cars[i].ID != 0xFFFFFFFF && cars[i].Customization_Slot_Number != 0xFF)
                 {
 
-                    //custom1[p].Parts_ID_Pointer = Helper_Functions.ReadUInt16(Data, Base_Address + cars[i].Customization_Slot_Number, Save_Form.Xbox_360);
-                    Part_Chain_Reader(Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data,Save_Form.Xbox_360), Helper_Functions.ReadUInt16(Data, Pos + (cars[i].Customization_Slot_Number * 0x470), Save_Form.Xbox_360));
+                    //custom1[p].Parts_ID_Pointer = Helper_Functions.ReadUInt16(Data, Base_Address + cars[i].Customization_Slot_Number, Profile_Editor.Xbox_360);
+                    Part_Chain_Reader(Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data,Profile_Editor.Xbox_360), Helper_Functions.ReadUInt16(Data, Pos + (cars[i].Customization_Slot_Number * 0x470), Profile_Editor.Xbox_360));
 
                 }
             }
@@ -265,7 +265,7 @@ namespace EA_MD5_hasher
         {
             for (int p = 0, count = 0x0; p < 74; p++, count += 0x470)
             {
-                if (Helper_Functions.ReadUInt32(Data, (Base_Pos + count), Save_Form.Xbox_360) == 0xFFFFFFFF)
+                if (Helper_Functions.ReadUInt32(Data, (Base_Pos + count), Profile_Editor.Xbox_360) == 0xFFFFFFFF)
                 {
                     switch (Preset_Index)
                     {
@@ -276,9 +276,9 @@ namespace EA_MD5_hasher
                                 {
                                     Data[Base_Pos + count+i] = Preset_Car_Parts.Red_Kenji_Stats_Custimization_Slot[i];
                                 }
-                                Helper_Functions.WriteUInt16(Data, Base_Pos + count+2, Find_Vinyl_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox), Preset_Car_Parts.Red_Kenji), Save_Form.Xbox_360);
+                                Helper_Functions.WriteUInt16(Data, Base_Pos + count+2, Find_Vinyl_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox), Preset_Car_Parts.Red_Kenji), Profile_Editor.Xbox_360);
                                 Data[Base_Pos + count + 0xB8] = (byte)p;
-                                Helper_Functions.WriteUInt16(Data,Base_Pos + count, Find_Part_Chain_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox) + 0x15E84, Preset_Car_Parts.Red_Kenji_Parts_List),Save_Form.Xbox_360);
+                                Helper_Functions.WriteUInt16(Data,Base_Pos + count, Find_Part_Chain_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox) + 0x15E84, Preset_Car_Parts.Red_Kenji_Parts_List),Profile_Editor.Xbox_360);
                                 break;
                             }
                         case 1:
@@ -287,9 +287,9 @@ namespace EA_MD5_hasher
                                 {
                                     Data[Base_Pos + count + i] = Preset_Car_Parts.Red_Wolf_Stats_Custimization_Slot[i];
                                 }
-                                Helper_Functions.WriteUInt16(Data, Base_Pos + count + 2, Find_Vinyl_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox), Preset_Car_Parts.Red_Wolf), Save_Form.Xbox_360);
+                                Helper_Functions.WriteUInt16(Data, Base_Pos + count + 2, Find_Vinyl_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox), Preset_Car_Parts.Red_Wolf), Profile_Editor.Xbox_360);
                                 Data[Base_Pos + count + 0xB8] = (byte)p;
-                                Helper_Functions.WriteUInt16(Data, Base_Pos + count, Find_Part_Chain_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox) + 0x15E84, Preset_Car_Parts.Red_Wolf_Parts_List), Save_Form.Xbox_360);
+                                Helper_Functions.WriteUInt16(Data, Base_Pos + count, Find_Part_Chain_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox) + 0x15E84, Preset_Car_Parts.Red_Wolf_Parts_List), Profile_Editor.Xbox_360);
                                 break;
                             }
                         case 2:
@@ -298,9 +298,9 @@ namespace EA_MD5_hasher
                                 {
                                     Data[Base_Pos + count + i] = Preset_Car_Parts.Red_Angie_Stats_Custimization_Slot[i];
                                 }
-                                Helper_Functions.WriteUInt16(Data, Base_Pos + count + 2, Find_Vinyl_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox), Preset_Car_Parts.Red_Angie), Save_Form.Xbox_360);
+                                Helper_Functions.WriteUInt16(Data, Base_Pos + count + 2, Find_Vinyl_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox), Preset_Car_Parts.Red_Angie), Profile_Editor.Xbox_360);
                                 Data[Base_Pos + count + 0xB8] = (byte)p;
-                                Helper_Functions.WriteUInt16(Data, Base_Pos + count, Find_Part_Chain_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox) + 0x15E84, Preset_Car_Parts.Red_Angie_Parts_List), Save_Form.Xbox_360);
+                                Helper_Functions.WriteUInt16(Data, Base_Pos + count, Find_Part_Chain_Slot(ref Data, Platform_Car_Converter.Find_Car_Strct_Pos(Data, Xbox) + 0x15E84, Preset_Car_Parts.Red_Angie_Parts_List), Profile_Editor.Xbox_360);
                                 break;
                             }
                         case 3:
@@ -352,11 +352,11 @@ namespace EA_MD5_hasher
         {
             for (ushort i = 0; i < 0x9470; i += 4)
             {
-                if (Helper_Functions.ReadUInt16(Data, i + Base_Pos + 0x15E84, Save_Form.Xbox_360) == 0x7FFF || Helper_Functions.ReadUInt16(Data, i + Base_Pos + 0x15E84, Save_Form.Xbox_360) == 0xFFFF)
+                if (Helper_Functions.ReadUInt16(Data, i + Base_Pos + 0x15E84, Profile_Editor.Xbox_360) == 0x7FFF || Helper_Functions.ReadUInt16(Data, i + Base_Pos + 0x15E84, Profile_Editor.Xbox_360) == 0xFFFF)
                 {
                     return (ushort)(i);
                 }
-                else if (Helper_Functions.ReadUInt16(Data, i + Base_Pos, Save_Form.Xbox_360) == 0xFEFF)
+                else if (Helper_Functions.ReadUInt16(Data, i + Base_Pos, Profile_Editor.Xbox_360) == 0xFEFF)
                 {
                     return (ushort)(i);
                 }
@@ -376,11 +376,11 @@ namespace EA_MD5_hasher
             Slot_Part_Position = Pos;
             for (ushort i = 0; i < Preset_Car_Parts.Length - 2; i++)
             {
-                    Helper_Functions.WriteUInt16(Data, Pos + Base_Pos, Preset_Car_Parts[i], Save_Form.Xbox_360);
-                    Helper_Functions.WriteUInt16(Data, Pos + Base_Pos + 2, (ushort)(Pos/4+1), Save_Form.Xbox_360);
+                    Helper_Functions.WriteUInt16(Data, Pos + Base_Pos, Preset_Car_Parts[i], Profile_Editor.Xbox_360);
+                    Helper_Functions.WriteUInt16(Data, Pos + Base_Pos + 2, (ushort)(Pos/4+1), Profile_Editor.Xbox_360);
                     Pos = Find_Empty_Part_Position(Data, Base_Pos);               
             }
-            Helper_Functions.WriteUInt16(Data, Pos + Base_Pos, Preset_Car_Parts[Preset_Car_Parts.Length-1], Save_Form.Xbox_360);
+            Helper_Functions.WriteUInt16(Data, Pos + Base_Pos, Preset_Car_Parts[Preset_Car_Parts.Length-1], Profile_Editor.Xbox_360);
             return (ushort)(Slot_Part_Position / 4);
         }
 
@@ -824,7 +824,7 @@ namespace EA_MD5_hasher
         {
             for (int p = 0, count = 0xC; p < 199; p++, count += 0x14)
             {
-                if (Helper_Functions.ReadUInt32(Data, (Base_Pos + count),Save_Form.Xbox_360) == 0xFFFFFFFF)
+                if (Helper_Functions.ReadUInt32(Data, (Base_Pos + count),Profile_Editor.Xbox_360) == 0xFFFFFFFF)
                 {
                     
                     Byte Garage = 0xFF;
@@ -841,9 +841,9 @@ namespace EA_MD5_hasher
         {
             for (int p = 0, count = 0x1F2F4; p < 0x2BC; p++, count += 0x1C)
             {
-                if (Helper_Functions.ReadUInt16(Data, Base_Position + count + 0x8,Save_Form.Xbox_360) == 0x7FFF)
+                if (Helper_Functions.ReadUInt16(Data, Base_Position + count + 0x8,Profile_Editor.Xbox_360) == 0x7FFF)
                 {
-                    Helper_Functions.WriteUInt16(Data, Base_Position + count + 0x8, Vinyl_ID, Save_Form.Xbox_360);
+                    Helper_Functions.WriteUInt16(Data, Base_Position + count + 0x8, Vinyl_ID, Profile_Editor.Xbox_360);
                     return (ushort)p;
                 }
             }

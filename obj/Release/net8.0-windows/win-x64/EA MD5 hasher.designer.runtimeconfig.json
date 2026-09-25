@@ -1,0 +1,24 @@
+{
+  "runtimeOptions": {
+    "tfm": "net8.0",
+    "frameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "8.0.31"
+      },
+      {
+        "name": "Microsoft.WindowsDesktop.App",
+        "version": "8.0.31"
+      }
+    ],
+    "additionalProbingPaths": [
+      "C:\\Users\\jake\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jake\\.nuget\\packages"
+    ],
+    "configProperties": {
+      "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,
+      "CSWINRT_USE_WINDOWS_UI_XAML_PROJECTIONS": false,
+      "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
+    }
+  }
+}

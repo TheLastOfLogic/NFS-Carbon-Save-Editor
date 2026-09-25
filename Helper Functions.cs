@@ -143,78 +143,13 @@ namespace EA_MD5_hasher
             Buffer.BlockCopy(bytes, 0, data, offset, 4);
         }
 
-        public static void Build_Complete_JDLZ_Data_Base(ListView lv, ref byte[] JDLZ_Data)
-        {
-            if (lv.SelectedItems.Count > 0)
-            {
-                // 1. Get the selected row
-                ListViewItem selectedRow = lv.SelectedItems[0];
-                string offset = selectedRow.SubItems[1].Text; // Column 2 (Offset)
-                string packed = selectedRow.SubItems[2].Text; // Column 3 (Packed)
-                string unpacked = selectedRow.SubItems[3].Text; // Column 4 (Unpacked)
-                JDLZ_Data = new byte[int.Parse(unpacked.Replace("0x", ""), System.Globalization.NumberStyles.HexNumber)];
-                Buffer.BlockCopy(Form1.Find_Game, int.Parse(offset.Replace("0x", ""), System.Globalization.NumberStyles.HexNumber), JDLZ_Data, 0, int.Parse(unpacked.Replace("0x", ""), System.Globalization.NumberStyles.HexNumber));
-            }
-        }
+        
 
-        public static void Grabbing_Data(ListView lv, ref byte[] JDLZ_Data)
-        {
-            if (lv.SelectedItems.Count > 0)
-            {
-                // 1. Get the selected row
-                ListViewItem selectedRow = lv.SelectedItems[0];
-                string offset = selectedRow.SubItems[1].Text; // Column 2 (Offset)
-                string packed = selectedRow.SubItems[2].Text; // Column 3 (Packed)
-                string unpacked = selectedRow.SubItems[3].Text; // Column 4 (Unpacked)
-                JDLZ_Data = new byte[int.Parse(unpacked.Replace("0x", ""), System.Globalization.NumberStyles.HexNumber)];
-                Buffer.BlockCopy(Form1.Find_Game, int.Parse(offset.Replace("0x", ""), System.Globalization.NumberStyles.HexNumber),JDLZ_Data,0, int.Parse(unpacked.Replace("0x", ""), System.Globalization.NumberStyles.HexNumber));
-            }
-
-            //JDLZ_Data = JDLZ.decompress(JDLZ_Data);
-        }
+        
 
 
 
-        public static void Populate_JDLZ_List(ListView lw)
-        {
-            int Count = 0;
-            int[] Index  = new int[25];
-            int[] Unpacked = new int[25];
-            int[] Packed = new int[25];
-            
-            // Ensure the view is correct
-            lw.View = View.Details;
-            lw.FullRowSelect = true; // Makes it easier to see what you're clicking
-
-            // Clear everything as per your preference
-            lw.Items.Clear();
-            lw.Columns.Clear();
-
-            // Set the Column Collection
-            lw.Columns.Add("#", 25);
-            lw.Columns.Add("Offset", 120);
-            lw.Columns.Add("Packed Size", 120);
-            lw.Columns.Add("Unpacked Size", 120);
-
-            Find_JDLZ(Form1.Find_Game, ref Count, ref Index, ref Unpacked, ref Packed);
-            for (int i = 0; i < Count; i++)
-            {
-               
-                lw.Items.Add((i+1).ToString());
-                lw.Items[i].SubItems.Add("0x" + Index[i].ToString("X"));
-                if (Save_Form.Xbox_360 == true)
-                {  
-                    lw.Items[i].SubItems.Add("0x" + SwapEndianness(Packed[i]).ToString("X"));
-                    lw.Items[i].SubItems.Add("0x" + SwapEndianness(Unpacked[i]).ToString("X"));
-                }
-                else
-                {
-                    lw.Items[i].SubItems.Add("0x" + Packed[i].ToString("X"));
-                    lw.Items[i].SubItems.Add("0x" + Unpacked[i].ToString("X"));
-                }
-                }
-
-            }
+        
 
         public static void Find_JDLZ(byte[] Data,  ref int Count, ref int[] index, ref int[] Unpacked_Length, ref int[] Packed_Length)
         {

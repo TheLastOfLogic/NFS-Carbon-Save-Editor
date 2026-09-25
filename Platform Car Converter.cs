@@ -646,31 +646,6 @@ namespace EA_MD5_hasher
 
             }
         } */
-        public static Int32 Read_Car_Table_Legnth(byte[] Plateform_Data_1, byte[] Plateform_Data_2, bool Xbox)
-        {
-            
-            Pos = Find_Car_Strct_Pos(Plateform_Data_1, Xbox);
-            if (Pos != 0x7FFFFFFF)
-            {
-
-                bool Xbox_360 = Save_Form.Xbox_360;
-                if (Save_Form.Xbox_360)
-                {
-                    if (Helper_Functions.ReadInt32(Plateform_Data_1, Pos, Xbox_360) == (Helper_Functions.ReadInt32(Plateform_Data_2, Pos + 0x30, Xbox_360)))
-                    {
-
-                    }
-                }
-                else
-                {
-                    if (Helper_Functions.ReadInt32(Plateform_Data_1, Pos, Xbox_360) == (Helper_Functions.ReadInt32(Plateform_Data_2, Pos - 0x30, Xbox_360)))
-                    {
-
-                    }
-                }
-                return 0;
-            }
-            return 0;
-        }
+        
     }
 }

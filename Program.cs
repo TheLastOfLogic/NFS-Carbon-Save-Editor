@@ -1,3 +1,5 @@
+using EA_MD5_hasher.NFS_ProStreet;
+
 namespace EA_MD5_hasher
 {
     internal static class Program

@@ -600,7 +600,7 @@ namespace EA_MD5_hasher
     "Porsche 911 GT3 RS (997)",             // 997gt3rs
     "Lotus Europa S",                       // europa
     "BMW M3 GTR (E46)",                     // bmwm3gtre46
-    "Cross's Chevrolet Corvette Z06",       // CROSS
+    "Cross's Chevrolet Corvette Z06 (Bonus Car)",       // CROSS
     "Fire Truck",                           // firetruck
     "Dump Truck",                           // dumptruck
     "Civic Cruiser (Cop Tier 1)",           // cop
@@ -616,24 +616,24 @@ namespace EA_MD5_hasher
     "Collector's Edition Murciélago",       // CE_MURCIELAGO
     "Collector's Edition Skyline",          // CE_SKYLINE
     "Collector's Edition SL65",             // CE_SL65
-    "Samson's Plymouth 'Cuda (Revved)",     // REVVED
+    "Bonus RX8 (Revved Comic Book Car)",     // REVVED
     "Custom Gallardo (Challenge Series)",   // CS_GALLARDO
     "Online Muscle Car",                    // ONLINE_MUSCLE
-    "Kenji's Mazda RX-8 (Challenge Series)",// CS_RX8
+    "Custom Mazda RX-8 (Challenge Series)",// CS_RX8
     "Custom Mustang GT (Challenge Series)", // CS_MUSTANGGT
     "State Interceptor (Cop GTO)",          // copgto
     "Civic Cruiser (Cop Midsize)",          // copmidsize
-    "Undercover Cruiser (Cop Sport)",       // copsport
+    "Cruiser Corvette (Cop Sport)",       // copsport
     "Rhino (Cop SUV Heavy)",                // copsuv
-    "State Interceptor Ghost (GTO)",        // copgtoghost
-    "Undercover Cruiser (Ghost)",           // copghost
-    "Civic Cruiser (CE)",                   // copmidsize_ce
+    "Undercover State Interceptor (GTO)",// copgtoghost
+    "Undercover Cruiser ",           // copghost
+    "Civic Cruiser (Collectors Edition)",                   // copmidsize_ce
     "Civic Cruiser (Intro Movie)",          // copmidsize_nis
     "Civic Cruiser (Intro Movie Light)",    // copmidsize_nis_ld
     "Civic Cruiser (Weak)",                 // copmidsize_weak
     "Cross's Corvette (Cop)",               // copcross
-    "Undercover Cruiser Ghost (Sport)",     // copsportghost
-    "Undercover Cruiser Henchman (Sport)",  // copsporthench
+    "Undercover Cruiser(Corvette)",     // copsportghost
+    "Online Police Corvette",  // copsporthench
     "Rhino (Cop SUV Light)",                // copsuvl
     "Rhino (Cop SUV Patrol)",               // copsuvpatrol
     "Trailer A (Flatbed)",                  // trailera

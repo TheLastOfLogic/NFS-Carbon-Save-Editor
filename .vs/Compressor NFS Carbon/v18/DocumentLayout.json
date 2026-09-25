@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|c:\\users\\jake\\desktop\\my projects vs\\nfs-carbon-save-editor-main\\nfs carbon\\md5_prep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:nfs carbon\\md5_prep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|c:\\users\\jake\\desktop\\my projects vs\\nfs-carbon-save-editor-main\\nfs carbon\\jdlz removing globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:nfs carbon\\jdlz removing globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|c:\\users\\jake\\desktop\\my projects vs\\nfs-carbon-save-editor-main\\nfs carbon\\huffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:nfs carbon\\huffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|c:\\users\\jake\\desktop\\my projects vs\\nfs-carbon-save-editor-main\\nfs carbon\\get registry key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:nfs carbon\\get registry key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|c:\\users\\jake\\desktop\\my projects vs\\nfs-carbon-save-editor-main\\nfs carbon\\data_table_reader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:nfs carbon\\data_table_reader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|c:\\users\\jake\\desktop\\my projects vs\\nfs-carbon-save-editor-main\\nfs carbon\\22114455 builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:nfs carbon\\22114455 builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|c:\\users\\jake\\desktop\\my projects vs\\nfs-carbon-save-editor-main\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{405498E5-309E-4215-94D9-077A55768F87}|Compressor NFS Carbon.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MD5_Prep.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\MD5_Prep.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\MD5_Prep.cs",
+              "ToolTip": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\MD5_Prep.cs",
+              "RelativeToolTip": "NFS Carbon\\MD5_Prep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T16:04:41.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JDLZ removing Globals.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\JDLZ removing Globals.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\JDLZ removing Globals.cs",
+              "ToolTip": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\JDLZ removing Globals.cs",
+              "RelativeToolTip": "NFS Carbon\\JDLZ removing Globals.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T16:04:40.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Huffer.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\Huffer.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\Huffer.cs",
+              "ToolTip": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\Huffer.cs",
+              "RelativeToolTip": "NFS Carbon\\Huffer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T16:04:38.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Get Registry Key.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\Get Registry Key.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\Get Registry Key.cs",
+              "ToolTip": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\Get Registry Key.cs",
+              "RelativeToolTip": "NFS Carbon\\Get Registry Key.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T16:04:37.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Data_Table_Reader.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\Data_Table_Reader.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\Data_Table_Reader.cs",
+              "ToolTip": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\Data_Table_Reader.cs",
+              "RelativeToolTip": "NFS Carbon\\Data_Table_Reader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T16:04:35.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "22114455 Builder.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\22114455 Builder.cs",
+              "RelativeDocumentMoniker": "NFS Carbon\\22114455 Builder.cs",
+              "ToolTip": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\NFS Carbon\\22114455 Builder.cs",
+              "RelativeToolTip": "NFS Carbon\\22114455 Builder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T16:00:12.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAADgv4IAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T15:53:48.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jake\\Desktop\\my projects vs\\NFS-Carbon-Save-Editor-main\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\JMIGH\\source\\repos\\Compressor NFS Carbon\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\JMIGH\\source\\repos\\Compressor NFS Carbon\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T15:53:49.91Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

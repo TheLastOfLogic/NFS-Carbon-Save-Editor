@@ -1436,7 +1436,7 @@
             Crew_Member_GB.Font = new Font("Segoe UI", 11F);
             Crew_Member_GB.Location = new Point(241, 13);
             Crew_Member_GB.Name = "Crew_Member_GB";
-            Crew_Member_GB.Size = new Size(431, 158);
+            Crew_Member_GB.Size = new Size(431, 170);
             Crew_Member_GB.TabIndex = 13;
             Crew_Member_GB.TabStop = false;
             Crew_Member_GB.Text = "Crew Members";
@@ -1475,7 +1475,7 @@
             // Yumi_RB
             // 
             Yumi_RB.AutoSize = true;
-            Yumi_RB.Location = new Point(9, 129);
+            Yumi_RB.Location = new Point(9, 137);
             Yumi_RB.Name = "Yumi_RB";
             Yumi_RB.Size = new Size(128, 24);
             Yumi_RB.TabIndex = 22;
@@ -1497,7 +1497,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(299, 21);
+            label2.Location = new Point(299, 16);
             label2.Name = "label2";
             label2.Size = new Size(42, 20);
             label2.TabIndex = 9;
@@ -1506,7 +1506,7 @@
             // Samson_RB
             // 
             Samson_RB.AutoSize = true;
-            Samson_RB.Location = new Point(299, 129);
+            Samson_RB.Location = new Point(299, 137);
             Samson_RB.Name = "Samson_RB";
             Samson_RB.Size = new Size(128, 24);
             Samson_RB.TabIndex = 20;
@@ -1557,7 +1557,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(146, 21);
+            label6.Location = new Point(146, 16);
             label6.Name = "label6";
             label6.Size = new Size(43, 20);
             label6.TabIndex = 17;
@@ -1569,7 +1569,7 @@
             Samson_CB.Font = new Font("Segoe UI", 9F);
             Samson_CB.FormattingEnabled = true;
             Samson_CB.Items.AddRange(new object[] { "Locked", "Unlocked", "Crew" });
-            Samson_CB.Location = new Point(299, 105);
+            Samson_CB.Location = new Point(299, 108);
             Samson_CB.Name = "Samson_CB";
             Samson_CB.Size = new Size(121, 23);
             Samson_CB.TabIndex = 12;
@@ -1580,7 +1580,7 @@
             Yumi_CB.Font = new Font("Segoe UI", 9F);
             Yumi_CB.FormattingEnabled = true;
             Yumi_CB.Items.AddRange(new object[] { "Locked", "Unlocked", "Crew" });
-            Yumi_CB.Location = new Point(9, 105);
+            Yumi_CB.Location = new Point(9, 108);
             Yumi_CB.Name = "Yumi_CB";
             Yumi_CB.Size = new Size(121, 23);
             Yumi_CB.TabIndex = 10;
@@ -1599,7 +1599,7 @@
             // Nev_RB
             // 
             Nev_RB.AutoSize = true;
-            Nev_RB.Location = new Point(146, 131);
+            Nev_RB.Location = new Point(146, 137);
             Nev_RB.Name = "Nev_RB";
             Nev_RB.Size = new Size(128, 24);
             Nev_RB.TabIndex = 18;
@@ -1610,7 +1610,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(9, 21);
+            label1.Location = new Point(9, 16);
             label1.Name = "label1";
             label1.Size = new Size(29, 20);
             label1.TabIndex = 7;

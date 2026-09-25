@@ -18,6 +18,8 @@ namespace EA_MD5_hasher
 {
     public partial class Profile_Editor : Form
     {
+
+        public static bool Xbox_360;
         public byte[] Unchanged;
         public byte[] Data;
         public byte[] Data_Table;
@@ -72,32 +74,32 @@ namespace EA_MD5_hasher
                 {
                     case 0:
                         {
-                            Neville_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Save_Form.Xbox_360, i);
+                            Neville_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Xbox_360, i);
                             break;
                         }
                     case 1:
                         {
-                            Sal_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Save_Form.Xbox_360, i);
+                            Sal_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Xbox_360, i);
                             break;
                         }
                     case 2:
                         {
-                            Niki_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Save_Form.Xbox_360, i);
+                            Niki_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Xbox_360, i);
                             break;
                         }
                     case 3:
                         {
-                            Colin_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Save_Form.Xbox_360, i);
+                            Colin_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Xbox_360, i);
                             break;
                         }
                     case 4:
                         {
-                            Samson_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Save_Form.Xbox_360, i);
+                            Samson_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Xbox_360, i);
                             break;
                         }
                     case 5:
                         {
-                            Yumi_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Save_Form.Xbox_360, i);
+                            Yumi_CB.SelectedIndex = Save_Game_Structure.Find_Crew_Members(ref _Data, Xbox_360, i);
                             break;
                         }
                 }
@@ -109,13 +111,13 @@ namespace EA_MD5_hasher
             Data = (byte[])_Data.Clone();
             Data_Table = (byte[])_Data_Table.Clone();
             Unchanged = (byte[])_Unchanged.Clone();
-            Save_Game_Structure.Get_Active_Crew_Member(ref Data, Nev_RB, Sal_RB, Nikki_RB, Collin_RB, Samson_RB, Yumi_RB, Save_Form.Xbox_360);
-            Reading_Car_Data_To_UI.Populate_Garage(Data, Garage_Combo_B, Save_Form.Xbox_360);
+            Save_Game_Structure.Get_Active_Crew_Member(ref Data, Nev_RB, Sal_RB, Nikki_RB, Collin_RB, Samson_RB, Yumi_RB, Xbox_360);
+            Reading_Car_Data_To_UI.Populate_Garage(Data, Garage_Combo_B, Xbox_360);
             Garage_Combo_B.SelectedIndex = 0;
-            Reading_Car_Data_To_UI.Read_Strikes(Data, Strikes_Allowed_NUP, Current_Strikes_NUP, Car_Heat_Level_L, Bounty_L, Times_Evaded_L, Times_Caught_L, Speeding_NUP, Excessive_Speeding_NUP, Reckless_Driving_NUP, Raming_Police_Vehicle_NUP, Hit_N_Run_NUP, Damage_To_Property_NUP, Avoiding_Arrest_NUP, Driving_Off_Road_NUP, Total_Cost_For_Infactions_L, Garage_Combo_B, Save_Form.Xbox_360);
+            Reading_Car_Data_To_UI.Read_Strikes(Data, Strikes_Allowed_NUP, Current_Strikes_NUP, Car_Heat_Level_L, Bounty_L, Times_Evaded_L, Times_Caught_L, Speeding_NUP, Excessive_Speeding_NUP, Reckless_Driving_NUP, Raming_Police_Vehicle_NUP, Hit_N_Run_NUP, Damage_To_Property_NUP, Avoiding_Arrest_NUP, Driving_Off_Road_NUP, Total_Cost_For_Infactions_L, Garage_Combo_B, Xbox_360);
             Car_Lot_Combo_B.BeginUpdate();
             All_Available_Cars_ComboB.BeginUpdate();
-            Reading_Car_Data_To_UI.Populate_All_Cars(Data, Save_Form.Xbox_360, Car_Lot_Combo_B, All_Available_Cars_ComboB);
+            Reading_Car_Data_To_UI.Populate_All_Cars(Data, Xbox_360, Car_Lot_Combo_B, All_Available_Cars_ComboB);
             Car_Lot_Combo_B.EndUpdate();
             All_Available_Cars_ComboB.EndUpdate();
             path = File_Path; */
@@ -137,61 +139,61 @@ namespace EA_MD5_hasher
             {
                 if (ULA_CS_CB.Checked)
                 {
-                    Read_Data_Table.Unlock_All_Challenge_Series(ref Data, Save_Form.Xbox_360);
+                    Read_Data_Table.Unlock_All_Challenge_Series(ref Data, Xbox_360);
                 }
 
                 /*
                 if (Nev_RB.Checked)
                 {
-                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 0, Save_Form.Xbox_360);
+                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 0, Xbox_360);
                 }
                 else if (Sal_RB.Checked)
                 {
-                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 1, Save_Form.Xbox_360);
+                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 1, Xbox_360);
                 }
                 else if (Nikki_RB.Checked)
                 {
-                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 2, Save_Form.Xbox_360);
+                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 2, Xbox_360);
                 }
                 else if (Collin_RB.Checked)
                 {
-                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 3, Save_Form.Xbox_360);
+                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 3, Xbox_360);
                 }
                 else if (Samson_RB.Checked)
                 {
-                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 4, Save_Form.Xbox_360);
+                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 4, Xbox_360);
                 }
                 else if (Yumi_RB.Checked)
                 {
-                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 5, Save_Form.Xbox_360);
+                    Save_Game_Structure.Write_Active_Crew_Member(ref Data, 5, Xbox_360);
                 } */
 
-                Read_Data_Table.Breaking_Down_Data(ref Data_Table, ref Money_TB, ref Alias_TB, ref Crew_TB, Save_Form.Xbox_360, All_Performance_Parts_CB.Checked, All_Visuals_CB.Checked, Reward_Cards_CB.Checked, All_Autoscult_Aftermarket_CB.Checked, Show_All_Crew_Members_CB.Checked, Stock_Cars_CB.Checked, Bonus_Cars_CB.Checked, Custom_Cars_CB.Checked, Police_Cars_CB.Checked, Traffic_Cars_CB.Checked, Hidden_Debug_Car_CB.Checked, Complete_World_Map_CB.Checked, Mazda_Dealership_CB.Checked, Strike_Marker_NUP, Get_Out_Of_Jail_Marker_NUP, Garage_Theme_Combo_B, Skip_Tutorial_Checkbox);
+                Read_Data_Table.Breaking_Down_Data(ref Data_Table, ref Money_TB, ref Alias_TB, ref Crew_TB, Xbox_360, All_Performance_Parts_CB.Checked, All_Visuals_CB.Checked, Reward_Cards_CB.Checked, All_Autoscult_Aftermarket_CB.Checked, Show_All_Crew_Members_CB.Checked, Stock_Cars_CB.Checked, Bonus_Cars_CB.Checked, Custom_Cars_CB.Checked, Police_Cars_CB.Checked, Traffic_Cars_CB.Checked, Hidden_Debug_Car_CB.Checked, Complete_World_Map_CB.Checked, Mazda_Dealership_CB.Checked, Strike_Marker_NUP, Get_Out_Of_Jail_Marker_NUP, Garage_Theme_Combo_B, Skip_Tutorial_Checkbox);
 
 
                 //if (Show_All_Crew_Members_CB.Checked)
                 //{
-                // Save_Game_Structure.Write_Crew_Members(ref Data, Save_Form.Xbox_360);
-                // Save_Game_Structure.Rebuild_Crew(ref Data, Neville_CB.SelectedIndex, Sal_CB.SelectedIndex, Niki_CB.SelectedIndex, Colin_CB.SelectedIndex, Samson_CB.SelectedIndex, Yumi_CB.SelectedIndex, Save_Form.Xbox_360);
+                // Save_Game_Structure.Write_Crew_Members(ref Data, Xbox_360);
+                // Save_Game_Structure.Rebuild_Crew(ref Data, Neville_CB.SelectedIndex, Sal_CB.SelectedIndex, Niki_CB.SelectedIndex, Colin_CB.SelectedIndex, Samson_CB.SelectedIndex, Yumi_CB.SelectedIndex, Xbox_360);
                 // }
 
 
                 if (Complete_World_Map_CB.Checked)
                 {
-                    Save_Game_Structure.Unlock_Entire_Map(ref Data, Save_Form.Xbox_360);
+                    Save_Game_Structure.Unlock_Entire_Map(ref Data, Xbox_360);
                 }
                 if (Mazda_Dealership_CB.Checked)
                 {
-                    Save_Game_Structure.Unlock_Mazda_Dealership(ref Data, Save_Form.Xbox_360);
+                    Save_Game_Structure.Unlock_Mazda_Dealership(ref Data, Xbox_360);
                 }
-                _22114455_Builder.ReWrite_Data_Table(ref Data, Data_Table, Save_Form.Xbox_360);
-                //Array.Resize(ref Data_Table, Data.Length - (Helper_Functions.ReadInt32(Data, 0x20, Save_Form.Xbox_360) + 0x2C));
-                //Data = _22114455_Builder.Write_22114455_Container(ref Data, Data_Table, true, Save_Form.Xbox_360);
+                _22114455_Builder.ReWrite_Data_Table(ref Data, Data_Table, Xbox_360);
+                //Array.Resize(ref Data_Table, Data.Length - (Helper_Functions.ReadInt32(Data, 0x20, Xbox_360) + 0x2C));
+                //Data = _22114455_Builder.Write_22114455_Container(ref Data, Data_Table, true, Xbox_360);
                 //byte custom_Slot = 0xFF;
-                //custom_Slot = Save_Game_Structure.Find_Custimization_Slot(ref temp, Platform_Car_Converter.Find_Car_Strct_Pos(temp, Save_Form.Xbox_360) + 0xFAC, 2, Save_Form.Xbox_360);
-                //MessageBox.Show(Save_Game_Structure.Find_Empty_Car_Slot(ref temp, Platform_Car_Converter.Find_Car_Strct_Pos(temp, Save_Form.Xbox_360), custom_Slot, Save_Form.Xbox_360).ToString("X2"));
-                PC_Checksum_Fixer.Fix_Save_Game_PC_Only(ref Data, Save_Form.Xbox_360);
-                //EA_CRC32.UpdateHashes(Data, Save_Form.Xbox_360);
+                //custom_Slot = Save_Game_Structure.Find_Custimization_Slot(ref temp, Platform_Car_Converter.Find_Car_Strct_Pos(temp, Xbox_360) + 0xFAC, 2, Xbox_360);
+                //MessageBox.Show(Save_Game_Structure.Find_Empty_Car_Slot(ref temp, Platform_Car_Converter.Find_Car_Strct_Pos(temp, Xbox_360), custom_Slot, Xbox_360).ToString("X2"));
+                PC_Checksum_Fixer.Fix_Save_Game_PC_Only(ref Data, Xbox_360);
+                //EA_CRC32.UpdateHashes(Data, Xbox_360);
                 UnChanged_File = Xbox_360_Con_Handler.Merge_Back_Into_Xbox360_Save(ref UnChanged_File, Data);
 
                 File.WriteAllBytes(path, UnChanged_File);
@@ -237,7 +239,7 @@ namespace EA_MD5_hasher
         private void Garage_Combo_B_SelectedIndexChanged(object sender, EventArgs e)
         {
             updating_NUP = true;
-            Reading_Car_Data_To_UI.Read_Strikes(Data, Strikes_Allowed_NUP, Current_Strikes_NUP, Car_Heat_Level_L, Bounty_L, Times_Evaded_L, Times_Caught_L, Speeding_NUP, Excessive_Speeding_NUP, Reckless_Driving_NUP, Raming_Police_Vehicle_NUP, Hit_N_Run_NUP, Damage_To_Property_NUP, Avoiding_Arrest_NUP, Driving_Off_Road_NUP, Total_Cost_For_Infactions_L, Garage_Combo_B, Save_Form.Xbox_360);
+            Reading_Car_Data_To_UI.Read_Strikes(Data, Strikes_Allowed_NUP, Current_Strikes_NUP, Car_Heat_Level_L, Bounty_L, Times_Evaded_L, Times_Caught_L, Speeding_NUP, Excessive_Speeding_NUP, Reckless_Driving_NUP, Raming_Police_Vehicle_NUP, Hit_N_Run_NUP, Damage_To_Property_NUP, Avoiding_Arrest_NUP, Driving_Off_Road_NUP, Total_Cost_For_Infactions_L, Garage_Combo_B, Xbox_360);
             updating_NUP = false;
         }
 
@@ -263,7 +265,7 @@ namespace EA_MD5_hasher
             {
                 Current_Strikes_NUP.Value = Strikes_Allowed_NUP.Value;
             }
-            Reading_Car_Data_To_UI.Write_Strikes(ref Data, Strikes_Allowed_NUP, null, Garage_Combo_B, Save_Form.Xbox_360);
+            Reading_Car_Data_To_UI.Write_Strikes(ref Data, Strikes_Allowed_NUP, null, Garage_Combo_B, Xbox_360);
         }
 
         private void Current_Strikes_NUP_ValueChanged(object sender, EventArgs e)
@@ -272,7 +274,7 @@ namespace EA_MD5_hasher
             {
                 Current_Strikes_NUP.Value = Strikes_Allowed_NUP.Value;
             }
-            Reading_Car_Data_To_UI.Write_Strikes(ref Data, null, Current_Strikes_NUP, Garage_Combo_B, Save_Form.Xbox_360);
+            Reading_Car_Data_To_UI.Write_Strikes(ref Data, null, Current_Strikes_NUP, Garage_Combo_B, Xbox_360);
 
         }
 
@@ -285,7 +287,7 @@ namespace EA_MD5_hasher
 
             Total_Cost_For_Infactions_L.Text = "Total Cost Of Infractions $" + Reading_Car_Data_To_UI.Read_Infractions(Speeding_NUP, Excessive_Speeding_NUP, Reckless_Driving_NUP, Raming_Police_Vehicle_NUP, Hit_N_Run_NUP, Damage_To_Property_NUP, Avoiding_Arrest_NUP, Driving_Off_Road_NUP).ToString();
             if (updating_NUP) return;
-            Reading_Car_Data_To_UI.Write_Infractions(ref Data, Speeding_NUP, Excessive_Speeding_NUP, Reckless_Driving_NUP, Raming_Police_Vehicle_NUP, Hit_N_Run_NUP, Damage_To_Property_NUP, Avoiding_Arrest_NUP, Driving_Off_Road_NUP, Garage_Combo_B, Save_Form.Xbox_360);
+            Reading_Car_Data_To_UI.Write_Infractions(ref Data, Speeding_NUP, Excessive_Speeding_NUP, Reckless_Driving_NUP, Raming_Police_Vehicle_NUP, Hit_N_Run_NUP, Damage_To_Property_NUP, Avoiding_Arrest_NUP, Driving_Off_Road_NUP, Garage_Combo_B, Xbox_360);
 
         }
 
@@ -403,8 +405,8 @@ namespace EA_MD5_hasher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Reading_Car_Data_To_UI.Rewards_After_Boss_Battle(ref Data, Save_Form.Xbox_360);
-            PC_Checksum_Fixer.Update_Label(Data, ref Header_Data_CRC_Value_L, ref File_Data_CRC_Value_L, ref Header_CRC_Value_L, ref License_ID_Value_L, ref File_MD5_Hash_Value_L, ref Game_MD5_Hash_Value_L, Save_Form.Xbox_360);
+            Reading_Car_Data_To_UI.Rewards_After_Boss_Battle(ref Data, Xbox_360);
+            PC_Checksum_Fixer.Update_Label(Data, ref Header_Data_CRC_Value_L, ref File_Data_CRC_Value_L, ref Header_CRC_Value_L, ref License_ID_Value_L, ref File_MD5_Hash_Value_L, ref Game_MD5_Hash_Value_L, Xbox_360);
 
         }
 
@@ -414,7 +416,7 @@ namespace EA_MD5_hasher
             {
                 if (path != "" && Data.Length > 0)
                 {
-                    PC_Checksum_Fixer.Update_Label(Data, ref Header_Data_CRC_Value_L, ref File_Data_CRC_Value_L, ref Header_CRC_Value_L, ref License_ID_Value_L, ref File_MD5_Hash_Value_L, ref Game_MD5_Hash_Value_L, Save_Form.Xbox_360);
+                    PC_Checksum_Fixer.Update_Label(Data, ref Header_Data_CRC_Value_L, ref File_Data_CRC_Value_L, ref Header_CRC_Value_L, ref License_ID_Value_L, ref File_MD5_Hash_Value_L, ref Game_MD5_Hash_Value_L, Xbox_360);
                 }
             }
         }
@@ -426,12 +428,12 @@ namespace EA_MD5_hasher
 
         private void Add_Car_To_Car_Lot_Bttn_Click(object sender, EventArgs e)
         {
-            Reading_Car_Data_To_UI.Inject_Car(ref Data, Save_Form.Xbox_360, Car_Lot_Combo_B, All_Available_Cars_ComboB);
+            Reading_Car_Data_To_UI.Inject_Car(ref Data, Xbox_360, Car_Lot_Combo_B, All_Available_Cars_ComboB);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Preset_Riders_List.Dump_Preset(Data, Save_Form.Xbox_360);
+            Preset_Riders_List.Dump_Preset(Data, Xbox_360);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -489,8 +491,8 @@ namespace EA_MD5_hasher
                     }
 
 
-                    Preset_Riders_List.Write_Customization_1(ref Data, Grab_Bytes_From_Internal_File.GetResourceBytes(Preset_Riders_Combo_Box.SelectedItem + "_Customization.bin"), Save_Form.Xbox_360, ref csn, Preset_Riders_Combo_Box.SelectedItem.ToString());
-                    Preset_Riders_List.Write_Preset_CarSlot(ref Data, Save_Form.Xbox_360, Grab_Bytes_From_Internal_File.GetResourceBytes(Preset_Riders_Combo_Box.SelectedItem + "_CarSlot.bin"), 0x8, 0xFF, csn, radio);
+                    Preset_Riders_List.Write_Customization_1(ref Data, Grab_Bytes_From_Internal_File.GetResourceBytes(Preset_Riders_Combo_Box.SelectedItem + "_Customization.bin"), Xbox_360, ref csn, Preset_Riders_Combo_Box.SelectedItem.ToString());
+                    Preset_Riders_List.Write_Preset_CarSlot(ref Data, Xbox_360, Grab_Bytes_From_Internal_File.GetResourceBytes(Preset_Riders_Combo_Box.SelectedItem + "_CarSlot.bin"), 0x8, 0xFF, csn, radio);
 
                 }
                 catch
@@ -512,7 +514,7 @@ namespace EA_MD5_hasher
 
             // Combine it to create a target output folder path
             string outputFolder = "";
-            if (Save_Form.Xbox_360 == true)
+            if (Xbox_360 == true)
             {
                 outputFolder = Path.Combine(exeDirectory, "Dumps", "Xbox 360");
             }
@@ -530,7 +532,7 @@ namespace EA_MD5_hasher
             string filePath = Path.Combine(outputFolder, "Kenji Game" + ".bin");
             File.WriteAllBytes(filePath, Data);
 
-            MessageBox.Show(Preset_Riders_List.Get_Custimization_Total(Data, Save_Form.Xbox_360).ToString());
+            MessageBox.Show(Preset_Riders_List.Get_Custimization_Total(Data, Xbox_360).ToString());
             //add in Vinyl Filler, while using our new Vinyl List to Select Position
 
         }
@@ -555,7 +557,7 @@ namespace EA_MD5_hasher
                                 {
                                     category = 2;
                                     radio = rb;
-                                    Garage = Preset_Riders_List.Garage_Space(ref Data, Save_Form.Xbox_360);
+                                    Garage = Preset_Riders_List.Garage_Space(ref Data, Xbox_360);
                                     break;
                                 }
                             case RadioButton rb when rb.Name == "My_Cars_Radio_Bttn" && rb.Checked:
@@ -587,11 +589,11 @@ namespace EA_MD5_hasher
                     }
 
 
-                    Preset_Riders_List.Write_Customization_1(ref Data, Grab_Bytes_From_Internal_File.GetResourceBytes(Preset_Riders_List.presetRideNames[Preset_Riders_Combo_Box.SelectedIndex] + "_Customization.bin"), Save_Form.Xbox_360, ref csn, Preset_Riders_List.presetRideNames[Preset_Riders_Combo_Box.SelectedIndex]);
-                    Preset_Riders_List.Write_Preset_CarSlot(ref Data, Save_Form.Xbox_360, Grab_Bytes_From_Internal_File.GetResourceBytes(Preset_Riders_List.presetRideNames[Preset_Riders_Combo_Box.SelectedIndex] + "_CarSlot.bin"), category, Garage, csn, radio);
+                    Preset_Riders_List.Write_Customization_1(ref Data, Grab_Bytes_From_Internal_File.GetResourceBytes(Preset_Riders_List.presetRideNames[Preset_Riders_Combo_Box.SelectedIndex] + "_Customization.bin"), Xbox_360, ref csn, Preset_Riders_List.presetRideNames[Preset_Riders_Combo_Box.SelectedIndex]);
+                    Preset_Riders_List.Write_Preset_CarSlot(ref Data, Xbox_360, Grab_Bytes_From_Internal_File.GetResourceBytes(Preset_Riders_List.presetRideNames[Preset_Riders_Combo_Box.SelectedIndex] + "_CarSlot.bin"), category, Garage, csn, radio);
                     Garage_Combo_B.BeginUpdate();
                     Garage_Combo_B.Items.Clear();
-                    Reading_Car_Data_To_UI.Populate_Garage(Data, Garage_Combo_B, Save_Form.Xbox_360);
+                    Reading_Car_Data_To_UI.Populate_Garage(Data, Garage_Combo_B, Xbox_360);
                     Garage_Combo_B.SelectedIndex = 0;
                     Garage_Combo_B.EndUpdate();
                 }
@@ -632,9 +634,9 @@ namespace EA_MD5_hasher
             {
                 try
                 {
-                    Save_Game_Structure.Clear_All_Car_Data(ref Data, Save_Form.Xbox_360);
+                    Save_Game_Structure.Clear_All_Car_Data(ref Data, Xbox_360);
                     MessageBox.Show("All Cars And Their Data Have Been Removed!");
-                    PC_Checksum_Fixer.Update_Label(Data, ref Header_Data_CRC_Value_L, ref File_Data_CRC_Value_L, ref Header_CRC_Value_L, ref License_ID_Value_L, ref File_MD5_Hash_Value_L, ref Game_MD5_Hash_Value_L, Save_Form.Xbox_360);
+                    PC_Checksum_Fixer.Update_Label(Data, ref Header_Data_CRC_Value_L, ref File_Data_CRC_Value_L, ref Header_CRC_Value_L, ref License_ID_Value_L, ref File_MD5_Hash_Value_L, ref Game_MD5_Hash_Value_L, Xbox_360);
 
                 }
                 catch (Exception ex)
@@ -649,9 +651,9 @@ namespace EA_MD5_hasher
         {
             if (Data.Length != 0x40000)
             {
-                PC_Checksum_Fixer.Fix_Save_Game_PC_Only(ref Data, Save_Form.Xbox_360);
+                PC_Checksum_Fixer.Fix_Save_Game_PC_Only(ref Data, Xbox_360);
             }
-            PC_Checksum_Fixer.Update_Label(Data, ref Header_Data_CRC_Value_L, ref File_Data_CRC_Value_L, ref Header_CRC_Value_L, ref License_ID_Value_L, ref File_MD5_Hash_Value_L, ref Game_MD5_Hash_Value_L, Save_Form.Xbox_360);
+            PC_Checksum_Fixer.Update_Label(Data, ref Header_Data_CRC_Value_L, ref File_Data_CRC_Value_L, ref Header_CRC_Value_L, ref License_ID_Value_L, ref File_MD5_Hash_Value_L, ref Game_MD5_Hash_Value_L, Xbox_360);
             foreach (Control c in groupBox4.Controls)
             {
                 if (c is Label l)
@@ -670,22 +672,24 @@ namespace EA_MD5_hasher
                 Data = File.ReadAllBytes(path);
                 UnChanged_File = File.ReadAllBytes(path);
                 Data = Xbox_360_Con_Handler.Xbox_360_Save_Extractor(UnChanged_File, ref Data);
-                if (_22114455_Builder.Validate_Save(Data, Save_Form.Xbox_360))
+                if (_22114455_Builder.Validate_Save(Data, Xbox_360))
                 {
-                    Data_Table = _22114455_Builder.ReRead_Data_Table(Data, Save_Form.Xbox_360);
-                    // _22114455_Builder.Compare_Decompressed_Data(Data, Save_Form.Xbox_360);
-                    //Data_Table = new byte[Helper_Functions.ReadInt32(Data, 0x20, Save_Form.Xbox_360) + 0x2C];
-                    // = _22114455_Builder.Read_22114455_Container(Data, Data_Table, Save_Form.Xbox_360);
-                    //Array.Resize(ref Data_Table, _22114455_Builder.Compare_Decompressed_Data(Data, Save_Form.Xbox_360));
+                    Data_Table = _22114455_Builder.ReRead_Data_Table(Data, Xbox_360);
+                    // _22114455_Builder.Compare_Decompressed_Data(Data, Xbox_360);
+                    //Data_Table = new byte[Helper_Functions.ReadInt32(Data, 0x20, Xbox_360) + 0x2C];
+                    // = _22114455_Builder.Read_22114455_Container(Data, Data_Table, Xbox_360);
+                    //Array.Resize(ref Data_Table, _22114455_Builder.Compare_Decompressed_Data(Data, Xbox_360));
 
-                    // Array.Resize(ref Data_Table, Data.Length - (Helper_Functions.ReadInt32(Data, 0x20, Save_Form.Xbox_360) + 0x2C));
+                    // Array.Resize(ref Data_Table, Data.Length - (Helper_Functions.ReadInt32(Data, 0x20, Xbox_360) + 0x2C));
                     //Profile_Editor PE = new Profile_Editor(ref Data, ref Data_Table, ref UnChanged_File, ref path);
                     //PE.Show();
-                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Save_Form.Xbox_360);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_1_Combobox, Crew_Member_1_Label, 0);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_2_Combobox, Crew_Member_2_Label, 1);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_3_Combobox, Crew_Member_3_Label, 2);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Currently_Selected_Car_Combobox, null, 3);
+                    Currently_Select_Car_ComboB.Items.Clear();
+                    Currently_Select_Car_ComboB.Items.AddRange(Reading_Car_Data_To_UI.Populate_Master_Car_List(Data, Xbox_360));
+                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Xbox_360);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_1_Combobox, Crew_Member_1_Label, 0);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_2_Combobox, Crew_Member_2_Label, 1);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_3_Combobox, Crew_Member_3_Label, 2);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Currently_Select_Car_ComboB, null, 3);
 
                    
                 }
@@ -696,7 +700,7 @@ namespace EA_MD5_hasher
         private void Load_New_Save_Bttn_Click(object sender, EventArgs e)
         {
             UnChanged_File = new byte[1];
-            path = File_Explorer.Open_File_Read_Data(ref UnChanged_File, ref Data, ref Save_Form.Xbox_360, path);
+            path = File_Explorer.Open_File_Read_Data(ref UnChanged_File, ref Data, ref Xbox_360, path);
             if (path != "")
             {
                 foreach (Control c in tabControl1.Controls)
@@ -715,24 +719,26 @@ namespace EA_MD5_hasher
                 //Data = File.ReadAllBytes(path);
                 //UnChanged_File = File.ReadAllBytes(path);
                 Data = Xbox_360_Con_Handler.Xbox_360_Save_Extractor(UnChanged_File, ref Data);
-                Data_Table = _22114455_Builder.ReRead_Data_Table(Data, Save_Form.Xbox_360);
-                if (_22114455_Builder.Validate_Save(Data, Save_Form.Xbox_360) == true)
+                Data_Table = _22114455_Builder.ReRead_Data_Table(Data, Xbox_360);
+                if (_22114455_Builder.Validate_Save(Data, Xbox_360) == true)
                 {
-                    /* _22114455_Builder.Compare_Decompressed_Data(Data, Save_Form.Xbox_360);
-                     Data_Table = new byte[Helper_Functions.ReadInt32(Data, 0x20, Save_Form.Xbox_360) + 0x2C];
-                     Data_Table = _22114455_Builder.Read_22114455_Container(Data, Data_Table, Save_Form.Xbox_360);
+                    /* _22114455_Builder.Compare_Decompressed_Data(Data, Xbox_360);
+                     Data_Table = new byte[Helper_Functions.ReadInt32(Data, 0x20, Xbox_360) + 0x2C];
+                     Data_Table = _22114455_Builder.Read_22114455_Container(Data, Data_Table, Xbox_360);
 
-                     Array.Resize(ref Data_Table, _22114455_Builder.Compare_Decompressed_Data(Data, Save_Form.Xbox_360));
+                     Array.Resize(ref Data_Table, _22114455_Builder.Compare_Decompressed_Data(Data, Xbox_360));
 
-                     Array.Resize(ref Data_Table, Data.Length - (Helper_Functions.ReadInt32(Data, 0x20, Save_Form.Xbox_360) + 0x2C));
+                     Array.Resize(ref Data_Table, Data.Length - (Helper_Functions.ReadInt32(Data, 0x20, Xbox_360) + 0x2C));
                      //Profile_Editor PE = new Profile_Editor(ref Data, ref Data_Table, ref UnChanged_File, ref path);
                      //PE.Show(); */
-                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Save_Form.Xbox_360);
-                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Save_Form.Xbox_360);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_1_Combobox, Crew_Member_1_Label, 0);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_2_Combobox, Crew_Member_2_Label, 1);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_3_Combobox, Crew_Member_3_Label, 2);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Currently_Selected_Car_Combobox, null, 3);
+                    Currently_Select_Car_ComboB.Items.Clear();
+                    Currently_Select_Car_ComboB.Items.AddRange(Reading_Car_Data_To_UI.Populate_Master_Car_List(Data, Xbox_360));
+                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Xbox_360);
+                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Xbox_360);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_1_Combobox, Crew_Member_1_Label, 0);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_2_Combobox, Crew_Member_2_Label, 1);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_3_Combobox, Crew_Member_3_Label, 2);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Currently_Selected_Car_Combobox, null, 3);
                 }
                 else
                 {
@@ -773,7 +779,7 @@ namespace EA_MD5_hasher
         private void Open_File_Bttn_Click(object sender, EventArgs e)
         {
 
-            path = File_Explorer.Open_File_Read_Data(ref UnChanged_File, ref Data, ref Save_Form.Xbox_360, path);
+            path = File_Explorer.Open_File_Read_Data(ref UnChanged_File, ref Data, ref Xbox_360, path);
             if (path != "")
             {
                 foreach (Control c in tabControl1.Controls)
@@ -794,18 +800,20 @@ namespace EA_MD5_hasher
                 //UnChanged_File = File.ReadAllBytes(path);
                 Data = Xbox_360_Con_Handler.Xbox_360_Save_Extractor(UnChanged_File, ref Data);
 
-                if (_22114455_Builder.Validate_Save(Data, Save_Form.Xbox_360))
+                if (_22114455_Builder.Validate_Save(Data, Xbox_360))
                 {
-                    Data_Table = _22114455_Builder.ReRead_Data_Table(Data, Save_Form.Xbox_360);
-                    
-                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Save_Form.Xbox_360);
+                    Data_Table = _22114455_Builder.ReRead_Data_Table(Data, Xbox_360);
+                    Currently_Select_Car_ComboB.Items.Clear();
+                    Currently_Select_Car_ComboB.Items.AddRange(Reading_Car_Data_To_UI.Populate_Master_Car_List(Data, Xbox_360));
+                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Xbox_360);
                     Crew_Member_1_Combobox.Items.Clear();
                     Crew_Member_1_Combobox.Items.AddRange(Reading_Car_Data_To_UI.Master_Car_List);
-                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Save_Form.Xbox_360);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_1_Combobox, Crew_Member_1_Label, 0);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_2_Combobox, Crew_Member_2_Label, 1);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Crew_Member_3_Combobox, Crew_Member_3_Label, 2);
-                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Save_Form.Xbox_360, Currently_Selected_Car_Combobox, null, 3);
+                    Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Xbox_360);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_1_Combobox, Crew_Member_1_Label, 0);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_2_Combobox, Crew_Member_2_Label, 1);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Crew_Member_3_Combobox, Crew_Member_3_Label, 2);
+                    Reading_Car_Data_To_UI.Populate_Selected_Combobox(Data, Xbox_360, Currently_Selected_Car_Combobox, null, 3);
+                    
 
                 }
             }
@@ -880,9 +888,9 @@ namespace EA_MD5_hasher
                 Data_Table = new byte[File.ReadAllBytes(filePath).Length];
                 Array.Copy(File.ReadAllBytes(filePath), Data_Table, File.ReadAllBytes(filePath).Length);
                
-                //Data_Table = _22114455_Builder.ReRead_Data_Table(Data, Save_Form.Xbox_360);
+                //Data_Table = _22114455_Builder.ReRead_Data_Table(Data, Xbox_360);
 
-                Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Save_Form.Xbox_360);
+                Reading_Car_Data_To_UI.Profile_Editor_Populate_UI(ref Data, ref Data_Table, ref Unchanged, ref path, ref Preset_Riders_Combo_Box, ref Neville_CB, ref Sal_CB, ref Niki_CB, ref Yumi_CB, ref Colin_CB, ref Samson_CB, ref Alias_TB, ref Crew_TB, ref Money_TB, ref Get_Out_Of_Jail_Marker_NUP, ref Strike_Marker_NUP, ref Nev_RB, ref Sal_RB, ref Nikki_RB, ref Collin_RB, ref Samson_RB, ref Yumi_RB, ref Strikes_Allowed_NUP, ref Current_Strikes_NUP, ref Car_Heat_Level_L, ref Bounty_L, ref Times_Evaded_L, ref Times_Caught_L, ref Speeding_NUP, ref Excessive_Speeding_NUP, ref Reckless_Driving_NUP, ref Raming_Police_Vehicle_NUP, ref Hit_N_Run_NUP, ref Damage_To_Property_NUP, ref Avoiding_Arrest_NUP, ref Driving_Off_Road_NUP, ref Total_Cost_For_Infactions_L, ref Garage_Combo_B, ref Car_Lot_Combo_B, ref All_Available_Cars_ComboB, ref File_Path_TB, ref Garage_Theme_Combo_B, ref Currently_Selected_Car_Combobox, ref Crew_Member_1_Combobox, ref Crew_Member_2_Combobox, ref Crew_Member_3_Combobox, Xbox_360);
                 Crew_Member_1_Combobox.Items.Clear();
                 Crew_Member_1_Combobox.Items.AddRange(Reading_Car_Data_To_UI.Master_Car_List);
                 Crew_Member_1_Combobox.SelectedIndex = (byte)Populate_Crew_Selected_Cars[0];
@@ -1023,8 +1031,8 @@ namespace EA_MD5_hasher
 
         private void Currently_Select_Car_ComboB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Currently_Select_Car_ComboB.Items.Clear();
-            Currently_Select_Car_ComboB.Items.AddRange(Reading_Car_Data_To_UI.Populate_Master_Car_List(Data, Save_Form.Xbox_360));
+           
+            
 
         }
     }

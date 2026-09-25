@@ -1,0 +1,20 @@
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\EA_MD5_hasher.Form1.resources
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\EA_MD5_hasher.Profile_Editor.resources
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor_NFS_Carbon.Properties.Resources.resources
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\EA_MD5_hasher.Save_Form.resources
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor NFS Carbon.csproj.GenerateResource.cache
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor NFS Carbon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor NFS Carbon.AssemblyInfoInputs.cache
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor NFS Carbon.AssemblyInfo.cs
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor NFS Carbon.csproj.CoreCompileInputs.cache
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\bin\Debug\net8.0-windows\Compressor NFS Carbon.exe
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\bin\Debug\net8.0-windows\Compressor NFS Carbon.deps.json
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\bin\Debug\net8.0-windows\Compressor NFS Carbon.runtimeconfig.json
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\bin\Debug\net8.0-windows\Compressor NFS Carbon.dll
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\bin\Debug\net8.0-windows\Compressor NFS Carbon.pdb
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor NFS Carbon.dll
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\refint\Compressor NFS Carbon.dll
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor NFS Carbon.pdb
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compressor NFS Carbon.genruntimeconfig.cache
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\ref\Compressor NFS Carbon.dll
+C:\Users\jake\Desktop\my projects vs\NFS-Carbon-Save-Editor-main\obj\Debug\net8.0-windows\Compress.01FCC602.Up2Date
