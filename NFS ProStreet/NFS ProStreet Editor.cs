@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace EA_MD5_hasher.NFS_ProStreet
 {
@@ -119,7 +120,18 @@ namespace EA_MD5_hasher.NFS_ProStreet
                     );
                     break;
             }
+            if (radioButton2.Enabled == false)
+            {
+                var BoosterRacerNames = Car_Presets.Racers
+                .Where(r => r.Tag != null && r.Tag.StartsWith("BOOST_RACERNAME_"))
+                .Select(r => r.Name)
+                .ToList();
 
+                foreach (var name in BoosterRacerNames)
+                {
+                    Grab_Racers_Combo_Box.Items.Remove(name);
+                }
+            }
             Grab_Racers_Combo_Box.EndUpdate();
 
             // Automatically select the first item if the list isn't empty
@@ -182,33 +194,73 @@ namespace EA_MD5_hasher.NFS_ProStreet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            byte[] Save_Game = new byte[0];
-            byte[] Data = new byte[0];
-            byte[] Hash_Buffer = new byte[0x10];
-            byte[] Save_Hash_Buffer = new byte[0x10];
-
-            bool Xbox = true;
-            string path = "";
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            try
             {
-                // Set initial directory and title
-                openFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                openFileDialog.Title = "Select File";
+                byte[] Save_Game = new byte[0];
+                byte[] Data = new byte[0];
+                byte[] Hash_Buffer = new byte[0x10];
+                byte[] Save_Hash_Buffer = new byte[0x10];
+                byte Version_Number;
 
-                // Filter for OFD files, XML, or All Files
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                bool Xbox = true;
+                string path = "";
+                using (OpenFileDialog openFileDialog = new OpenFileDialog())
                 {
-                    // Get the chosen file path
-                    path = openFileDialog.FileName;
+                    // Set initial directory and title
+                    openFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                    openFileDialog.Title = "Select File";
 
-                    // Example: Load or process the file
-                    Data = File.ReadAllBytes(path);
+                    // Filter for OFD files, XML, or All Files
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        // Get the chosen file path
+                        path = openFileDialog.FileName;
+
+                        // Example: Load or process the file
+                        Data = File.ReadAllBytes(path);
+                        if (Data.Length == 0x000B6838)
+                        MD5_Prep.Update_Game_PS(ref Data);
+                    }
                 }
+                radioButton1.Checked = true;
+                Hash_Buffer = NFS_ProStreet_MD5.Xbox_360_Mod_Pow_test(ref Data, true);
+                label4.Text = Data_Base.Compare_Hashes(Hash_Buffer, Data);
+                label3.Text = Data_Base.Grab_Save_Version(Data, ref Data_Base.Save_Version);
+                switch (Data_Base.Save_Version)
+                {
+                    case 1:
+                        {
+                            radioButton12.Checked = true;
+                            radioButton2.Enabled = false;
+                            break;
+                        }
+                    case 3:
+                        {
+                            radioButton13.Checked = true;
+                            radioButton2.Enabled = false;
+                            break;
+                        }
+                    case 7:
+                        {
+                            radioButton14.Checked = true;
+                            radioButton2.Enabled = true;
+                            break;
+                        }
+                    
+
+                }
+                
             }
-            Hash_Buffer = NFS_ProStreet_MD5.Xbox_360_Mod_Pow_test(ref Data, true);
-            label4.Text = Data_Base.Compare_Hashes(Hash_Buffer, Data);
-            label3.Text = Data_Base.Grab_Save_Version(Data);
+            catch
+            {
+                radioButton1.Checked = true;
+                label4.Text = "Checksum Unknown!";
+                label3.Text = "Version Unknown!";
+                radioButton2.Enabled = false;
+                
+                MessageBox.Show("Unable To Process Further");
+            }
         }
 
         private void Grab_Car_Model_ComboBox_SelectedIndexChanged(object sender, EventArgs e)

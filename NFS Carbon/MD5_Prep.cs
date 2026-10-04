@@ -6,15 +6,25 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class MD5_Prep
 {
-	public static byte[] Update_Game(ref byte[] Data)
-	{
-		byte[] input = new byte[0xFFF0];
+    public static byte[] Update_Game(ref byte[] Data)
+    {
+        byte[] input = new byte[0xFFF0];
         int Pos = Find_Game(Data);
-		Buffer.BlockCopy(Data,Pos,input,0,input.Length);
-		input = MD5.Create().ComputeHash(input);
-		Buffer.BlockCopy(input, 0, Data, Pos - 0x10, input.Length);
-		return input;
-	}
+        Buffer.BlockCopy(Data, Pos, input, 0, input.Length);
+        input = MD5.Create().ComputeHash(input);
+        Buffer.BlockCopy(input, 0, Data, Pos - 0x10, input.Length);
+        return input;
+    }
+
+    public static byte[] Update_Game_PS(ref byte[] Data)
+    {
+        int Pos = Find_Game(Data);
+        byte[] input = new byte[Game_MD5_Length(Data, Pos)];
+        Buffer.BlockCopy(Data, Pos, input, 0, input.Length);
+        input = MD5.Create().ComputeHash(input);
+        Buffer.BlockCopy(input, 0, Data, Pos - 0x10, input.Length);
+        return input;
+    }
 
     public static byte[] Update_Mod_Pow( ref byte[] Data, bool Xbox)
     {
@@ -40,8 +50,17 @@ public class MD5_Prep
         return Platform_Car_Converter.Find_Game_Pos(Data, Xbox) - 0x50;
         
     }
-	
 
+    public static Int32 Game_MD5_Length(byte[] Data, int Pos)
+    {
+        int Length = 0;
+        while (Data[Pos+ Length] != 0x51 || Data[Pos+ 1+Length] != 0xA4 || Data[Pos + 2 + Length] != 0x1B || Data[Pos + 3 + Length] != 0x14)
+        {
+            Length++;
+        }
+        return Length;
+        
+    }
     public static Int32 Find_Game(byte[] Data)
     {
         for (int i = 0; i < Data.Length - 1; i++)

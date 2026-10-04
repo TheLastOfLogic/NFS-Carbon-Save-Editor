@@ -49,6 +49,9 @@
             label3 = new Label();
             label4 = new Label();
             Grab_Car_Model_ComboBox = new ComboBox();
+            radioButton12 = new RadioButton();
+            radioButton13 = new RadioButton();
+            radioButton14 = new RadioButton();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -120,7 +123,7 @@
             groupBox1.Size = new Size(136, 295);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBox1.Text = "Opponent Categories";
             // 
             // radioButton11
             // 
@@ -288,11 +291,47 @@
             Grab_Car_Model_ComboBox.TabIndex = 10;
             Grab_Car_Model_ComboBox.SelectedIndexChanged += Grab_Car_Model_ComboBox_SelectedIndexChanged;
             // 
+            // radioButton12
+            // 
+            radioButton12.AutoSize = true;
+            radioButton12.Location = new Point(12, 448);
+            radioButton12.Name = "radioButton12";
+            radioButton12.Size = new Size(187, 19);
+            radioButton12.TabIndex = 11;
+            radioButton12.TabStop = true;
+            radioButton12.Text = "Version 1.0 (Nothings Patched)";
+            radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // radioButton13
+            // 
+            radioButton13.AutoSize = true;
+            radioButton13.Location = new Point(12, 473);
+            radioButton13.Name = "radioButton13";
+            radioButton13.Size = new Size(81, 19);
+            radioButton13.TabIndex = 12;
+            radioButton13.TabStop = true;
+            radioButton13.Text = "Version 1.3";
+            radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // radioButton14
+            // 
+            radioButton14.AutoSize = true;
+            radioButton14.Location = new Point(12, 498);
+            radioButton14.Name = "radioButton14";
+            radioButton14.Size = new Size(144, 19);
+            radioButton14.TabIndex = 13;
+            radioButton14.TabStop = true;
+            radioButton14.Text = "Version 1.7 DLC Added";
+            radioButton14.UseVisualStyleBackColor = true;
+            // 
             // NFS_ProStreet_Editor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(454, 584);
+            Controls.Add(radioButton14);
+            Controls.Add(radioButton13);
+            Controls.Add(radioButton12);
             Controls.Add(Grab_Car_Model_ComboBox);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -334,5 +373,8 @@
         private Label label3;
         private Label label4;
         private ComboBox Grab_Car_Model_ComboBox;
+        private RadioButton radioButton12;
+        private RadioButton radioButton13;
+        private RadioButton radioButton14;
     }
 }

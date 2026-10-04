@@ -21,7 +21,7 @@ namespace EA_MD5_hasher.NFS_ProStreet
         public static byte Offset;
 
 
-        public static string Grab_Save_Version(byte[] Data)
+        public static string Grab_Save_Version(byte[] Data, ref byte Version)
         {
             Save_Version = Data[0x2B];
             switch(Save_Version)
@@ -36,33 +36,39 @@ namespace EA_MD5_hasher.NFS_ProStreet
                     }
                 case 7:
                     {
-                        return "Current Version: Updated Version W/ DLC";
+                        return "Current Version: Updated Version With DLC";
                     }
             }
         }
 
         public static string Compare_Hashes(byte[] buffer, byte[] Data)
         {
-            
-            byte[] temp_buffer = new byte[0x10];
-            if (Data.Length == 0x505C)
+            try
             {
-                Offset = 0x5C;
+                byte[] temp_buffer = new byte[0x10];
+                if (Data.Length == 0x505C)
+                {
+                    Offset = 0x5C;
+                }
+                else if (Data.Length == 0x0B6838)
+                {
+                    Offset = 0x38;
+                }
+                Buffer.BlockCopy(Data, Offset, temp_buffer, 0, 0x10);
+                if (buffer.SequenceEqual(temp_buffer))
+                {
+                    Currupt = false;
+                    return "Save Main Checksum Okay!";
+                }
+                else
+                {
+                    Currupt = true;
+                    return "Saves Broken!";
+                }
             }
-            else if (Data.Length == 0x0B6838)
+            catch
             {
-                Offset = 0x38;
-            }
-            Buffer.BlockCopy(Data, Offset, temp_buffer, 0, 0x10);
-            if (buffer.SequenceEqual(temp_buffer))
-            {
-                Currupt = false;
-                return "Save Main Checksum Okay!";
-            }
-            else
-            {
-                Currupt = true;
-                return "Saves Broken!";
+                return("Unable to Compare Hashes");
             }
         }
 
