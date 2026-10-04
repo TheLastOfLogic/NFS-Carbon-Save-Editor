@@ -10,8 +10,10 @@ namespace EA_MD5_hasher.NFS_ProStreet
     {
         //version is 1/3/7 (1 basegame) (3 Update) (7 Update W/DLC) //Location at 0x2B File Starting at 0
         public static Byte Save_Version;
-
+        public static string path = "";
         public static bool Currupt;
+
+        public static byte[] Save_Game = new byte[0];
         public static UInt32 Money;
         public static Byte Totalled_Marker;
         public static Byte Free_Car_Marker;
@@ -24,11 +26,11 @@ namespace EA_MD5_hasher.NFS_ProStreet
         public static string Grab_Save_Version(byte[] Data, ref byte Version)
         {
             Save_Version = Data[0x2B];
-            switch(Save_Version)
+            switch (Save_Version)
             {
                 default:
                     {
-                       return "Current Version: Base Version";
+                        return "Current Version: Base Version";
                     }
                 case 3:
                     {
@@ -68,10 +70,26 @@ namespace EA_MD5_hasher.NFS_ProStreet
             }
             catch
             {
-                return("Unable to Compare Hashes");
+                return ("Unable to Compare Hashes");
             }
         }
 
+        public static UInt32[] Grab_Random_Cars(string[] Car_Array)
+        {
+            UInt32[] Preset_Hashs = new UInt32[400];
+            string[] random400 = Car_Array
+           
+    .Distinct()                         // Guarantees no duplicates if the source had any
+    .OrderBy(_ => Random.Shared.Next()) // Shuffles the sequence
+    .Take(400)                          // Takes exactly 400
+    .ToArray();
+
+            for (int i = 0; i < random400.Length; i++)
+            {
+                Preset_Hashs[i] = Helper_Functions.VLT_Hash(random400[i]);
+            }
+            return Preset_Hashs;
+        }
 
     }
 }

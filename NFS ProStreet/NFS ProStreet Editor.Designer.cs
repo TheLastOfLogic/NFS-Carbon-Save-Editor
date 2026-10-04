@@ -34,6 +34,9 @@
             Grab_Racers_Combo_Box = new ComboBox();
             radioButton1 = new RadioButton();
             groupBox1 = new GroupBox();
+            radioButton17 = new RadioButton();
+            radioButton16 = new RadioButton();
+            radioButton15 = new RadioButton();
             radioButton11 = new RadioButton();
             radioButton10 = new RadioButton();
             radioButton9 = new RadioButton();
@@ -73,15 +76,17 @@
             button2.TabIndex = 1;
             button2.Text = "Save";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(306, 248);
+            button3.Location = new Point(306, 141);
             button3.Name = "button3";
             button3.Size = new Size(111, 23);
             button3.TabIndex = 2;
             button3.Text = "Fill Entire Car Lot With Preset Cars";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Grab_Racers_Combo_Box
             // 
@@ -96,7 +101,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(6, 22);
+            radioButton1.Location = new Point(6, 100);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(75, 19);
             radioButton1.TabIndex = 4;
@@ -107,6 +112,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(radioButton17);
+            groupBox1.Controls.Add(radioButton16);
+            groupBox1.Controls.Add(radioButton15);
             groupBox1.Controls.Add(radioButton11);
             groupBox1.Controls.Add(radioButton10);
             groupBox1.Controls.Add(radioButton9);
@@ -118,17 +126,50 @@
             groupBox1.Controls.Add(radioButton3);
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(306, 277);
+            groupBox1.Location = new Point(306, 198);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(136, 295);
+            groupBox1.Size = new Size(136, 374);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Opponent Categories";
+            groupBox1.Text = "Car Locations";
+            // 
+            // radioButton17
+            // 
+            radioButton17.AutoSize = true;
+            radioButton17.Location = new Point(6, 75);
+            radioButton17.Name = "radioButton17";
+            radioButton17.Size = new Size(84, 19);
+            radioButton17.TabIndex = 14;
+            radioButton17.TabStop = true;
+            radioButton17.Text = "Bonus Cars";
+            radioButton17.UseVisualStyleBackColor = true;
+            // 
+            // radioButton16
+            // 
+            radioButton16.AutoSize = true;
+            radioButton16.Location = new Point(6, 25);
+            radioButton16.Name = "radioButton16";
+            radioButton16.Size = new Size(57, 19);
+            radioButton16.TabIndex = 15;
+            radioButton16.TabStop = true;
+            radioButton16.Text = "Carlot";
+            radioButton16.UseVisualStyleBackColor = true;
+            // 
+            // radioButton15
+            // 
+            radioButton15.AutoSize = true;
+            radioButton15.Location = new Point(6, 50);
+            radioButton15.Name = "radioButton15";
+            radioButton15.Size = new Size(62, 19);
+            radioButton15.TabIndex = 14;
+            radioButton15.TabStop = true;
+            radioButton15.Text = "Garage";
+            radioButton15.UseVisualStyleBackColor = true;
             // 
             // radioButton11
             // 
             radioButton11.AutoSize = true;
-            radioButton11.Location = new Point(6, 271);
+            radioButton11.Location = new Point(6, 349);
             radioButton11.Name = "radioButton11";
             radioButton11.Size = new Size(39, 19);
             radioButton11.TabIndex = 14;
@@ -140,7 +181,7 @@
             // radioButton10
             // 
             radioButton10.AutoSize = true;
-            radioButton10.Location = new Point(6, 246);
+            radioButton10.Location = new Point(6, 324);
             radioButton10.Name = "radioButton10";
             radioButton10.Size = new Size(54, 19);
             radioButton10.TabIndex = 13;
@@ -152,7 +193,7 @@
             // radioButton9
             // 
             radioButton9.AutoSize = true;
-            radioButton9.Location = new Point(6, 221);
+            radioButton9.Location = new Point(6, 299);
             radioButton9.Name = "radioButton9";
             radioButton9.Size = new Size(124, 19);
             radioButton9.TabIndex = 12;
@@ -164,7 +205,7 @@
             // radioButton8
             // 
             radioButton8.AutoSize = true;
-            radioButton8.Location = new Point(6, 196);
+            radioButton8.Location = new Point(6, 274);
             radioButton8.Name = "radioButton8";
             radioButton8.Size = new Size(114, 19);
             radioButton8.TabIndex = 11;
@@ -176,7 +217,7 @@
             // radioButton7
             // 
             radioButton7.AutoSize = true;
-            radioButton7.Location = new Point(6, 171);
+            radioButton7.Location = new Point(6, 249);
             radioButton7.Name = "radioButton7";
             radioButton7.Size = new Size(104, 19);
             radioButton7.TabIndex = 10;
@@ -188,7 +229,7 @@
             // radioButton6
             // 
             radioButton6.AutoSize = true;
-            radioButton6.Location = new Point(6, 146);
+            radioButton6.Location = new Point(6, 224);
             radioButton6.Name = "radioButton6";
             radioButton6.Size = new Size(105, 19);
             radioButton6.TabIndex = 9;
@@ -200,7 +241,7 @@
             // radioButton5
             // 
             radioButton5.AutoSize = true;
-            radioButton5.Location = new Point(6, 121);
+            radioButton5.Location = new Point(6, 199);
             radioButton5.Name = "radioButton5";
             radioButton5.Size = new Size(107, 19);
             radioButton5.TabIndex = 8;
@@ -212,7 +253,7 @@
             // radioButton4
             // 
             radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(6, 96);
+            radioButton4.Location = new Point(6, 174);
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(79, 19);
             radioButton4.TabIndex = 7;
@@ -224,7 +265,7 @@
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(6, 71);
+            radioButton3.Location = new Point(6, 149);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(73, 19);
             radioButton3.TabIndex = 6;
@@ -236,7 +277,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(6, 47);
+            radioButton2.Location = new Point(6, 124);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(91, 19);
             radioButton2.TabIndex = 5;
@@ -376,5 +417,8 @@
         private RadioButton radioButton12;
         private RadioButton radioButton13;
         private RadioButton radioButton14;
+        private RadioButton radioButton17;
+        private RadioButton radioButton16;
+        private RadioButton radioButton15;
     }
 }

@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs carbon\\md5_prep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon\\md5_prep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs prostreet\\nfs prosteet md5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs prostreet\\nfs prosteet md5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs prostreet\\nfs prostreet editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs prostreet\\nfs prostreet editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs carbon\\md5_prep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon\\md5_prep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs prostreet\\car structure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs prostreet\\car structure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs prostreet\\data_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs prostreet\\data_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs carbon\\reading_car_data_to_ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +31,8 @@
       "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs prostreet\\nfs prostreet editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs prostreet\\nfs prosteet md5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs prostreet\\nfs prosteet md5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\pc checksum fixer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:pc checksum fixer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs prostreet\\data_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs prostreet\\data_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\helper functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:helper functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs prostreet\\car presets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,6 +41,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\nfs carbon\\preset car parts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:nfs carbon\\preset car parts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|c:\\users\\jake\\documents\\github\\nfs-carbon-save-editor\\pc checksum fixer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD5A93E-FB6D-417B-A3B5-E63C3D599F6B}|EA MD5 hasher.csproj|solutionrelative:pc checksum fixer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +58,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "NFS ProStreet Editor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\NFS ProStreet Editor.cs",
+              "RelativeDocumentMoniker": "NFS ProStreet\\NFS ProStreet Editor.cs",
+              "ToolTip": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\NFS ProStreet Editor.cs [Design]",
+              "RelativeToolTip": "NFS ProStreet\\NFS ProStreet Editor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T22:11:13.094Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Helper Functions.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\Helper Functions.cs",
+              "RelativeDocumentMoniker": "Helper Functions.cs",
+              "ToolTip": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\Helper Functions.cs",
+              "RelativeToolTip": "Helper Functions.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAADgvzQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T20:29:25.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Car Structure.cs",
+              "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\Car Structure.cs",
+              "RelativeDocumentMoniker": "NFS ProStreet\\Car Structure.cs",
+              "ToolTip": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\Car Structure.cs",
+              "RelativeToolTip": "NFS ProStreet\\Car Structure.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAASwB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T19:48:35.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "PC Checksum Fixer.cs",
               "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\PC Checksum Fixer.cs",
               "RelativeDocumentMoniker": "PC Checksum Fixer.cs",
@@ -62,12 +108,11 @@
               "RelativeToolTip": "PC Checksum Fixer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T15:25:28.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-04T15:25:28.497Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MD5_Prep.cs",
               "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS Carbon\\MD5_Prep.cs",
               "RelativeDocumentMoniker": "NFS Carbon\\MD5_Prep.cs",
@@ -80,19 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NFS ProStreet Editor.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\NFS ProStreet Editor.cs",
-              "RelativeDocumentMoniker": "NFS ProStreet\\NFS ProStreet Editor.cs",
-              "ToolTip": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\NFS ProStreet Editor.cs [Design]",
-              "RelativeToolTip": "NFS ProStreet\\NFS ProStreet Editor.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T14:55:11.388Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Reading_Car_Data_To_UI.cs",
               "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS Carbon\\Reading_Car_Data_To_UI.cs",
               "RelativeDocumentMoniker": "NFS Carbon\\Reading_Car_Data_To_UI.cs",
@@ -111,27 +144,27 @@
               "RelativeDocumentMoniker": "NFS ProStreet\\NFS ProStreet Editor.cs",
               "ToolTip": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\NFS ProStreet Editor.cs",
               "RelativeToolTip": "NFS ProStreet\\NFS ProStreet Editor.cs",
-              "ViewState": "AgIAAMQAAAAAAAAAAAAcwN0AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAIBAAAAAAAAAAArwBkBAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-04T11:11:59.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "NFS Prosteet MD5.cs",
               "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\NFS Prosteet MD5.cs",
               "RelativeDocumentMoniker": "NFS ProStreet\\NFS Prosteet MD5.cs",
               "ToolTip": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\NFS Prosteet MD5.cs",
               "RelativeToolTip": "NFS ProStreet\\NFS Prosteet MD5.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBgAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwEgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-25T06:07:12.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -139,18 +172,17 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-25T02:40:24.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-25T02:40:24.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Data_Base.cs",
               "DocumentMoniker": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\Data_Base.cs",
               "RelativeDocumentMoniker": "NFS ProStreet\\Data_Base.cs",
               "ToolTip": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\Data_Base.cs",
               "RelativeToolTip": "NFS ProStreet\\Data_Base.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAqwDQAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAUwFoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-25T02:28:18.67Z",
               "EditorCaption": ""
@@ -163,7 +195,7 @@
               "RelativeDocumentMoniker": "NFS ProStreet\\Car Presets.cs",
               "ToolTip": "C:\\Users\\jake\\Documents\\GitHub\\NFS-Carbon-Save-Editor\\NFS ProStreet\\Car Presets.cs",
               "RelativeToolTip": "NFS ProStreet\\Car Presets.cs",
-              "ViewState": "AgIAAE4DAAAAAAAAAAAAAM0AAABlAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAkwNAHAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-25T02:15:10.672Z",
               "EditorCaption": ""

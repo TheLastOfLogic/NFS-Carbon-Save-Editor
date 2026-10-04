@@ -196,14 +196,14 @@ namespace EA_MD5_hasher.NFS_ProStreet
         {
             try
             {
-                byte[] Save_Game = new byte[0];
-                byte[] Data = new byte[0];
+                
+                Data_Base.Save_Game = new byte[0];
                 byte[] Hash_Buffer = new byte[0x10];
                 byte[] Save_Hash_Buffer = new byte[0x10];
                 byte Version_Number;
 
                 bool Xbox = true;
-                string path = "";
+                
                 using (OpenFileDialog openFileDialog = new OpenFileDialog())
                 {
                     // Set initial directory and title
@@ -215,18 +215,18 @@ namespace EA_MD5_hasher.NFS_ProStreet
                     if (openFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         // Get the chosen file path
-                        path = openFileDialog.FileName;
+                        Data_Base.path = openFileDialog.FileName;
 
                         // Example: Load or process the file
-                        Data = File.ReadAllBytes(path);
-                        if (Data.Length == 0x000B6838)
-                        MD5_Prep.Update_Game_PS(ref Data);
+                        Data_Base.Save_Game = File.ReadAllBytes(Data_Base.path);
+                        if (Data_Base.Save_Game.Length == 0x000B6838)
+                            MD5_Prep.Update_Game_PS(ref Data_Base.Save_Game);
                     }
                 }
                 radioButton1.Checked = true;
-                Hash_Buffer = NFS_ProStreet_MD5.Xbox_360_Mod_Pow_test(ref Data, true);
-                label4.Text = Data_Base.Compare_Hashes(Hash_Buffer, Data);
-                label3.Text = Data_Base.Grab_Save_Version(Data, ref Data_Base.Save_Version);
+                Hash_Buffer = NFS_ProStreet_MD5.Xbox_360_Mod_Pow_test(ref Data_Base.Save_Game, true);
+                label4.Text = Data_Base.Compare_Hashes(Hash_Buffer, Data_Base.Save_Game);
+                label3.Text = Data_Base.Grab_Save_Version(Data_Base.Save_Game, ref Data_Base.Save_Version);
                 switch (Data_Base.Save_Version)
                 {
                     case 1:
@@ -247,10 +247,10 @@ namespace EA_MD5_hasher.NFS_ProStreet
                             radioButton2.Enabled = true;
                             break;
                         }
-                    
+
 
                 }
-                
+
             }
             catch
             {
@@ -258,14 +258,29 @@ namespace EA_MD5_hasher.NFS_ProStreet
                 label4.Text = "Checksum Unknown!";
                 label3.Text = "Version Unknown!";
                 radioButton2.Enabled = false;
-                
+
                 MessageBox.Show("Unable To Process Further");
             }
         }
 
         private void Grab_Car_Model_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int pos = 0;
+            uint[] Car_Hashs = new uint[400];
+            Car_Hashs = Data_Base.Grab_Random_Cars(Car_Presets.All_Presets);
+            Data_Base.Save_Game = Car_Structure.Write_400_Randoms(Data_Base.Save_Game, Car_Hashs, pos);
+            //Car_Structure.Find_Car_Structure(Data_Base.Save_Game, pos);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           Buffer.BlockCopy(NFS_ProStreet_MD5.Xbox_360_Mod_Pow_test(ref Data_Base.Save_Game, true), 0, Data_Base.Save_Game, 0x38, 0x10);
+            File.WriteAllBytes(Data_Base.path, Data_Base.Save_Game);
         }
     }
 }
