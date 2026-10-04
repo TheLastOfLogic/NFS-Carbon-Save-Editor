@@ -1,21 +1,1171 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Formats.Asn1;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EA_MD5_hasher.NFS_ProStreet
 {
-    internal class Car_Presets
+    public static class Car_Presets
     {
 
-        public static readonly Dictionary<string, string> RacerNames = new()
+        public class RacerProfile
+        {
+            public string Tag { get; set; } = string.Empty;
+            public string Name { get; set; } = string.Empty;
+            public string[] CarModel => AssignedRaces
+            .Where(race => presetCarMap.ContainsKey(race))
+            .Select(race => presetCarMap[race])
+            .Distinct() // Removes duplicates if multiple races use the same car
+            .ToArray();
+            public string[] AssignedRaces { get; set; } = Array.Empty<string>();
+        }
+
+
+        
+
+        public static readonly List<RacerProfile> Racers = new()
+{
+
+    new RacerProfile
     {
         // Base Racers
-        
-{ "RACERNAME_000", "Alex Hutton" },
-{ "RACERNAME_001", "Ken Burney" },
-{ "RACERNAME_002", "Paul Ko" },
+        Tag = "RACERNAME_000", Name = "Alex Hutton", /*CarModel = new []{ "cobaltss", "gti", "s3", "challenger71", "mustangshlbyo", "gto65" }, */ AssignedRaces = new []{ "ch_t1_ptl_drag_mustgt", "ch_t1_ptl_grip_civichb", "opp_0_drag", "opp_0_drift", "opp_0_grip", "opp_0_sc" }
+    },
+    new RacerProfile
+    {
+        Tag = "RACERNAME_001", Name = "Ken Burney", /*CarModel = new []{ "civichb","gti", "gti", "camaro", "challenger71", "mustangshlbyo" }, */AssignedRaces = new []{ "ch_t1_ptl_drag_civichb", "ch_t1_ptl_grip_civichb", "opp_1_drag", "opp_1_drift", "opp_1_grip", "opp_1_sc" }
+    },
+
+    new RacerProfile
+    {
+        Tag = "RACERNAME_002", Name = "Paul Ko", AssignedRaces = new[] {
+    "ch_t1_ptl_drag_mustgt", "ch_t1_ptl_grip_civichb", "opp_2_drag", "opp_2_drift", "opp_2_grip", "opp_2_sc"}
+    },
+    new RacerProfile
+{
+    Tag = "RACERNAME_003", Name = "Don Berry", AssignedRaces = new string[] { "ch_t1_ptl_drag_civichb",
+    "ch_t1_ptl_grip_civichb",
+    "opp_3_drag",
+    "opp_3_drift",
+    "opp_3_grip",
+    "opp_3_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_004", Name = "Pete Carter", AssignedRaces = new string[] {"ch_t1_ptl_drag_mustgt",
+    "ch_t1_ptl_grip_civichb",
+    "opp_4_drag",
+    "opp_4_drift",
+    "opp_4_grip",
+    "opp_4_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_005", Name = "Eddy Spencer", AssignedRaces = new string[] { "ch_t1_ptl_drag_civichb",
+    "ch_t1_ptl_grip_civichb",
+    "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_350z",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_is350",
+    "ch_t1_willow_grip_is350",
+    "opp_5_drag",
+    "opp_5_drift",
+    "opp_5_grip",
+    "opp_5_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_006", Name = "Bill Newman", AssignedRaces = new string[] {"ch_t1_ptl_drag_mustgt",
+    "ch_t1_ptl_grip_civichb",
+    "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_gti",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_chevelle",
+    "ch_t1_willow_grip_is350",
+    "opp_6_drag",
+    "opp_6_drift",
+    "opp_6_grip",
+    "opp_6_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_007", Name = "Will Jackson", AssignedRaces = new string[] {"ch_t1_ptl_drag_civichb",
+    "ch_t1_ptl_grip_civichb",
+    "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_350z",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_is350",
+    "ch_t1_willow_grip_is350",
+    "opp_7_drag",
+    "opp_7_drift",
+    "opp_7_grip",
+    "opp_7_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_008", Name = "Carl Sanner", AssignedRaces = new string[] { "ch_t1_ptl_drag_mustgt",
+    "ch_t1_ptl_grip_civichb",
+    "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_gti",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_chevelle",
+    "ch_t1_willow_grip_is350",
+    "opp_8_drag",
+    "opp_8_drift",
+    "opp_8_grip",
+    "opp_8_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_009", Name = "Dale Bennett", AssignedRaces = new string[] { "ch_t1_ptl_drag_civichb",
+    "ch_t1_ptl_grip_civichb",
+    "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_350z",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_is350",
+    "ch_t1_willow_grip_is350",
+    "opp_9_drag",
+    "opp_9_drift",
+    "opp_9_grip",
+    "opp_9_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_010", Name = "Felix Tang", AssignedRaces = new string[] { "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_gti",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_chevelle",
+    "ch_t1_willow_grip_is350",
+    "opp_10_drag",
+    "opp_10_drift",
+    "opp_10_grip",
+    "opp_10_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_011", Name = "Pedro Wilson", AssignedRaces = new string[] {"ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_350z",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_is350",
+    "ch_t1_willow_grip_is350",
+    "opp_11_drag",
+    "opp_11_drift",
+    "opp_11_grip",
+    "opp_11_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_012", Name = "Wade Jackson", AssignedRaces = new string[] { "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_gti",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_chevelle",
+    "ch_t1_willow_grip_is350",
+    "opp_12_drag",
+    "opp_12_drift",
+    "opp_12_grip",
+    "opp_12_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_013", Name = "Angelo Rowley", AssignedRaces = new string[] { "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_350z",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_is350",
+    "ch_t1_willow_grip_is350",
+    "opp_13_drag",
+    "opp_13_drift",
+    "opp_13_grip",
+    "opp_13_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_014", Name = "Adrian Reed", AssignedRaces = new string[] { "ch_t1_tx_drag_gti",
+    "ch_t1_tx_drift_350z",
+    "ch_t1_tx_grip_gti",
+    "ch_t1_willow_drag_chevelle",
+    "ch_t1_willow_drift_chevelle",
+    "ch_t1_willow_grip_is350",
+    "opp_14_drag",
+    "opp_14_drift",
+    "opp_14_grip",
+    "opp_14_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_015", Name = "Christopher Jones", AssignedRaces = new string[] { "No Races Found"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_016", Name = "Blaine Cook", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_017", Name = "Chad Byers", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_018", Name = "Travis Bratton", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_019", Name = "Ron Chen", AssignedRaces = new string[] { "No Races Found"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_020", Name = "Masahide Omura", AssignedRaces = new string[] { "ch_t2_mond_drift_gto",
+    "ch_t2_mond_grip_gto",
+    "opp_20_drag",
+    "opp_20_drift",
+    "opp_20_grip",
+    "opp_20_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_021", Name = "Kazutoshi Kawakami", AssignedRaces = new string[] { "ch_t2_mond_drift_g35",
+    "ch_t2_mond_grip_gto",
+    "opp_21_drag",
+    "opp_21_drift",
+    "opp_21_grip",
+    "opp_21_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_022", Name = "Ryoma Shibasawa", AssignedRaces = new string[] { "ch_t2_mond_drift_gto",
+    "ch_t2_mond_grip_gto",
+    "opp_22_drag",
+    "opp_22_drift",
+    "opp_22_grip",
+    "opp_22_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_023", Name = "Shinji Takasu", AssignedRaces = new string[] { "opp_23_drag",
+    "opp_23_drift",
+    "opp_23_grip",
+    "opp_23_sc",
+    "ch_t2_mond_drift_g35",
+    "ch_t2_mond_grip_gto"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_024", Name = "Ukyo Ihara", AssignedRaces = new string[] { "ch_t2_mond_drift_gto",
+    "ch_t2_mond_grip_gto",
+    "opp_24_drag",
+    "opp_24_drift",
+    "opp_24_grip",
+    "opp_24_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_025", Name = "Masato Kihara", AssignedRaces = new string[] { "opp_25_drag",
+    "opp_25_drift",
+    "opp_25_grip",
+    "opp_25_sc",
+    "ch_t2_autop_drift_solstice",
+    "ch_t2_autop_grip_s15",
+    "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_bmwm3",
+    "ch_t2_mond_drift_g35",
+    "ch_t2_mond_grip_gto"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_026", Name = "Sadatake Ueshima", AssignedRaces = new string[] { "ch_t2_mond_drift_gto",
+    "ch_t2_mond_grip_gto",
+    "opp_26_drag",
+    "opp_26_drift",
+    "opp_26_grip",
+    "opp_26_sc",
+    "ch_t2_autop_drift_s15",
+    "ch_t2_autop_grip_s15",
+    "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_supra"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_027", Name = "Atshushi Muraguchi", AssignedRaces = new string[] { "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_bmwm3",
+    "ch_t2_mond_drift_g35",
+    "ch_t2_mond_grip_gto",
+    "opp_27_drag",
+    "opp_27_drift",
+    "opp_27_grip",
+    "opp_27_sc",
+    "ch_t2_autop_drift_solstice",
+    "ch_t2_autop_grip_s15" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_028", Name = "Shinji Mori", AssignedRaces = new string[] { "ch_t2_autop_drift_s15",
+    "ch_t2_autop_grip_s15",
+    "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_supra",
+    "ch_t2_mond_drift_gto",
+    "ch_t2_mond_grip_gto",
+    "opp_28_drag",
+    "opp_28_drift",
+    "opp_28_grip",
+    "opp_28_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_029", Name = "Kaneko Hiroyori", AssignedRaces = new string[] { "opp_29_drag",
+    "opp_29_drift",
+    "opp_29_grip",
+    "opp_29_sc",
+    "ch_t2_autop_drift_solstice",
+    "ch_t2_autop_grip_s15",
+    "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_bmwm3",
+    "ch_t2_mond_drift_g35",
+    "ch_t2_mond_grip_gto"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_030", Name = "Tomonori Uetake", AssignedRaces = new string[] { "opp_30_drag",
+    "opp_30_drift",
+    "opp_30_grip",
+    "opp_30_sc",
+    "ch_t2_autop_drift_s15",
+    "ch_t2_autop_grip_s15",
+    "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_supra" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_031", Name = "Kohji Yamagata", AssignedRaces = new string[] { "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_bmwm3",
+    "opp_31_drag",
+    "opp_31_drift",
+    "opp_31_grip",
+    "opp_31_sc",
+    "ch_t2_autop_drift_solstice",
+    "ch_t2_autop_grip_s15"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_032", Name = "Kazu Yoshida", AssignedRaces = new string[] { "ch_t2_autop_drift_s15",
+    "ch_t2_autop_grip_s15",
+    "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_supra",
+    "opp_32_drag",
+    "opp_32_drift",
+    "opp_32_grip",
+    "opp_32_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_033", Name = "Makoto Yoshizawa", AssignedRaces = new string[] { "opp_33_drag",
+    "opp_33_drift",
+    "opp_33_grip",
+    "opp_33_sc",
+    "ch_t2_autop_drift_solstice",
+    "ch_t2_autop_grip_s15",
+    "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_supra" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_034", Name = "Yoshiaki Kawakami", AssignedRaces = new string[] { "ch_t2_ebisu_drift_supra",
+    "ch_t2_ebisu_grip_bmwm3",
+    "ch_t2_ebisu_sc_supra",
+    "opp_34_drag",
+    "opp_34_drift",
+    "opp_34_grip",
+    "opp_34_sc",
+    "ch_t2_autop_drift_s15",
+    "ch_t2_autop_grip_s15" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_035", Name = "Conrad Miller", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_036", Name = "Fred Watkins", AssignedRaces = new string[] { "No Races Found"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_037", Name = "Diego Wolfe", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_038", Name = "Marcel Porter", AssignedRaces = new string[] { "No Races Found"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_039", Name = "Jonathan Evans", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_040", Name = "Takuya Kawayama", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_041", Name = "Satoshi Hosokaya", AssignedRaces = new string[] { "opp_41_drag",
+    "opp_41_drift",
+    "opp_41_grip",
+    "opp_41_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_042", Name = "Mitsuharu Tanaka", AssignedRaces = new string[] { "opp_42_drag",
+    "opp_42_drift",
+    "opp_42_grip",
+    "opp_42_sc",
+    "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_skyline",
+    "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_cayman",
+    "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_rs4"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_043", Name = "Naoki Yoshihara", AssignedRaces = new string[] {"opp_43_drag",
+    "opp_43_drift",
+    "opp_43_grip",
+    "opp_43_sc",
+    "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_nsx" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_044", Name = "Hiroaki Terasawa", AssignedRaces = new string[] { "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_cayman",
+    "opp_44_drag",
+    "opp_44_drift",
+    "opp_44_grip",
+    "opp_44_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_045", Name = "Munehiko Kawaguchi", AssignedRaces = new string[] { "opp_45_drag",
+    "opp_45_drift",
+    "opp_45_grip",
+    "opp_45_sc",
+    "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_viper",
+    "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_nsx",
+    "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_z06"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_046", Name = "Mitsuhide Nakamura", AssignedRaces = new string[] { "opp_46_drag",
+    "opp_46_drift",
+    "opp_46_grip",
+    "opp_46_sc",
+    "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_cayman"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_047", Name = "Yoshio Sato", AssignedRaces = new string[] {"ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_nsx",
+    "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_z06",
+    "opp_47_drag",
+    "opp_47_drift",
+    "opp_47_grip",
+    "opp_47_sc",
+    "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_viper" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_048", Name = "Charlie Heyman", AssignedRaces = new string[] { "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_skyline",
+    "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_cayman",
+    "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_rs4",
+    "opp_48_drag",
+    "opp_48_drift",
+    "opp_48_grip",
+    "opp_48_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_049", Name = "Colby Canham", AssignedRaces = new string[] { "opp_49_drag",
+    "opp_49_drift",
+    "opp_49_grip",
+    "opp_49_sc",
+    "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_viper",
+    "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_nsx",
+    "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_z06"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_050", Name = "Brandon Tennant ^", AssignedRaces = new string[] { "opp_50_drag",
+    "opp_50_drift",
+    "opp_50_grip",
+    "opp_50_sc",
+    "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_skyline",
+    "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_cayman",
+    "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_rs4" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_051", Name = "Perry Prescott", AssignedRaces = new string[] {"ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_z06",
+    "opp_51_drag",
+    "opp_51_drift",
+    "opp_51_grip",
+    "opp_51_sc",
+    "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_viper",
+    "ch_t3_infineon_drag_cayman",
+    "ch_t3_infineon_drift_nsx",
+    "ch_t3_infineon_grip_nsx" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_052", Name = "Oliver Armitage", AssignedRaces = new string[] { "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_rs4",
+    "opp_52_drag",
+    "opp_52_drift",
+    "opp_52_grip",
+    "opp_52_sc",
+    "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_skyline"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_053", Name = "Don Braun", AssignedRaces = new string[] {"ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_viper",
+    "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_z06",
+    "opp_53_drag",
+    "opp_53_drift",
+    "opp_53_grip",
+    "opp_53_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_054", Name = "Seb Crawford", AssignedRaces = new string[] {"opp_54_drag",
+    "opp_54_drift",
+    "opp_54_grip",
+    "opp_54_sc",
+    "ch_t3_autob_drift_viper",
+    "ch_t3_autob_grip_skyline",
+    "ch_t3_autob_sc_skyline",
+    "ch_t3_nevada_drag_z06",
+    "ch_t3_nevada_drift_z06",
+    "ch_t3_nevada_grip_rs4",
+    "ch_t3_nevada_sc_rs4" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_055", Name = "Tyron Bryan", AssignedRaces = new string[] { "No Racers Found"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_056", Name = "Stuart Mitchell", AssignedRaces = new string[] { "No Racers Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_057", Name = "Kyle Easter", AssignedRaces = new string[] { "No Racers Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_058", Name = "Scott East", AssignedRaces = new string[] { "No Racers Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_059", Name = "Rory Taggart", AssignedRaces = new string[] { "No Racers Found" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_060", Name = "Mike Lineman", AssignedRaces = new string[] {"hd_opp_1_drag",
+    "hd_opp_1_drift",
+    "hd_opp_1_grip",
+    "hd_opp_1_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_061", Name = "Matt Pritchard", AssignedRaces = new string[] { "hd_opp_2_drag",
+    "hd_opp_2_drift",
+    "hd_opp_2_grip",
+    "hd_opp_2_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_062", Name = "Karl Losey", AssignedRaces = new string[] { "hd_opp_3_drag",
+    "hd_opp_3_drift",
+    "hd_opp_3_grip",
+    "hd_opp_3_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_063", Name = "Ben Haverman", AssignedRaces = new string[] {"hd_opp_4_drag",
+    "hd_opp_4_drift",
+    "hd_opp_4_grip",
+    "hd_opp_4_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_064", Name = "Filip Douglas", AssignedRaces = new string[] {"hd_opp_5_drag",
+    "hd_opp_5_drift",
+    "hd_opp_5_grip",
+    "hd_opp_5_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_065", Name = "Marcel Buddenseik", AssignedRaces = new string[] {"hd_opp_6_drag",
+    "hd_opp_6_drift",
+    "hd_opp_6_grip",
+    "hd_opp_6_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_066", Name = "Chet Higgens", AssignedRaces = new string[] {"hd_opp_7_drag",
+    "hd_opp_7_drift",
+    "hd_opp_7_grip",
+    "hd_opp_7_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_067", Name = "Klaus Steele", AssignedRaces = new string[] {"hd_opp_8_drag",
+    "hd_opp_8_drift",
+    "hd_opp_8_grip",
+    "hd_opp_8_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_068", Name = "Gustavo Demetrius", AssignedRaces = new string[] {"hd_opp_9_drag",
+    "hd_opp_9_drift",
+    "hd_opp_9_grip",
+    "hd_opp_9_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_069", Name = "Dominik Wilkins", AssignedRaces = new string[] { "hd_opp_10_drag",
+    "hd_opp_10_drift",
+    "hd_opp_10_grip",
+    "hd_opp_10_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_070", Name = "Charlie Gaskins", AssignedRaces = new string[] {"hd_opp_11_drag",
+    "hd_opp_11_drift",
+    "hd_opp_11_grip",
+    "hd_opp_11_sc" /* yes this one is apart of the race,
+    "hd_opp_12_drag" */ }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_071", Name = "Bill Tireman", AssignedRaces = new string[] {"hd_opp_12_drag",
+    "hd_opp_12_drift",
+    "hd_opp_12_grip",
+    "hd_opp_12_sc" }
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_072", Name = "Al Gregg", AssignedRaces = new string[] { "hd_opp_13_drag",
+    "hd_opp_13_drift",
+    "hd_opp_13_grip",
+    "hd_opp_13_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_073", Name = "Rob Chase", AssignedRaces = new string[] { "hd_opp_14_drag",
+    "hd_opp_14_drift",
+    "hd_opp_14_grip",
+    "hd_opp_14_sc"}
+},
+new RacerProfile
+{
+    Tag = "RACERNAME_074", Name = "Bruno Hardy", AssignedRaces = new string[] {"hd_opp_15_drag",
+    "hd_opp_15_drift",
+    "hd_opp_15_grip",
+    "hd_opp_15_sc" }
+},
+
+//Booster Opp
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_001", Name = "Carey Hill", AssignedRaces = new string[] { "b_opp_1_drag",
+    "b_opp_1_drift",
+    "b_opp_1_grip",
+    "b_opp_1_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_002", Name = "Dustin Elton", AssignedRaces = new string[] { "b_opp_2_drag", "b_opp_2_drift", "b_opp_2_grip", "b_opp_2_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_003", Name = "Josh Fairview", AssignedRaces = new string[] { "b_opp_3_drag",
+    "b_opp_3_drift",
+    "b_opp_3_grip",
+    "b_opp_3_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_004", Name = "David Con", AssignedRaces = new string[] { "b_opp_4_drag",
+    "b_opp_4_drift",
+    "b_opp_4_grip",
+    "b_opp_4_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_005", Name = "Manny Solemn", AssignedRaces = new string[] { "b_opp_5_drag",
+    "b_opp_5_drift",
+    "b_opp_5_grip",
+    "b_opp_5_sc" }
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_006", Name = "Konrad Mull", AssignedRaces = new string[] { "b_opp_6_drag",
+    "b_opp_6_drift",
+    "b_opp_6_grip",
+    "b_opp_6_sc" }
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_007", Name = "Victor Hesh", AssignedRaces = new string[] { "b_opp_7_drift",
+    "b_opp_7_grip",
+    "b_opp_7_sc",
+    //yes this one was found with b_opp_7
+    /* "b_opp_8_drag"*/}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_008", Name = "Clayton Mason", AssignedRaces = new string[] { "b_opp_8_drag",
+    "b_opp_8_drift",
+    "b_opp_8_grip",
+    "b_opp_8_sc" }
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_009", Name = "Nikki Swan", AssignedRaces = new string[] { "b_opp_9_drag",
+    "b_opp_9_drift",
+    "b_opp_9_grip",
+    "b_opp_9_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_010", Name = "Jake Winston", AssignedRaces = new string[] { "b_opp_10_drag",
+    "b_opp_10_drift",
+    "b_opp_10_grip",
+    "b_opp_10_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_012", Name = "Edward Hamilton", AssignedRaces = new string[] { "b_opp_12_drag",
+    "b_opp_12_drift",
+    "b_opp_12_grip",
+    "b_opp_12_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_014", Name = "Gary Right", AssignedRaces = new string[] { "b_opp_14_drag",
+    "b_opp_14_drift",
+    "b_opp_14_grip",
+    "b_opp_14_sc" }
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_016", Name = "Vincent Strongarm", AssignedRaces = new string[] { "b_opp_16_drag",
+    "b_opp_16_drift",
+    "b_opp_16_grip",
+    "b_opp_16_sc" }
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_018", Name = "John Laurier", AssignedRaces = new string[] { "b_opp_18_drag",
+    "b_opp_18_drift",
+    "b_opp_18_grip",
+    "b_opp_18_sc" }
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_019", Name = "Jimmy Plant", AssignedRaces = new string[] { "b_opp_19_drag",
+    "b_opp_19_drift",
+    "b_opp_19_grip",
+    "b_opp_19_sc" }
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_020", Name = "Ashley Veer", AssignedRaces = new string[] { "b_opp_20_drag",
+    "b_opp_20_drift",
+    "b_opp_20_grip",
+    "b_opp_20_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_021", Name = "Carl Money", AssignedRaces = new string[] { "b_opp_21_drag",
+    "b_opp_21_drift",
+    "b_opp_21_grip",
+    "b_opp_21_sc"}
+},
+new RacerProfile
+{
+    Tag = "BOOST_RACERNAME_022", Name = "Eduardo Williams", AssignedRaces = new string[] { "b_opp_22_drag",
+    "b_opp_22_drift",
+    "b_opp_22_grip",
+    "b_opp_22_sc" }
+},
+
+// Elite Racers
+new RacerProfile
+{
+    Tag = "ELITENAME_001", Name = "Mamoru Arakawa", AssignedRaces = new string[] { "elite_opp_1_drag",
+    "elite_opp_1_drift",
+    "elite_opp_1_grip",
+    "elite_opp_1_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_002", Name = "Seiko Makiguchi", AssignedRaces = new string[] {"elite_opp_2_drag",
+    "elite_opp_2_drift",
+    "elite_opp_2_grip",
+    "elite_opp_2_sc" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_003", Name = "Tsuneo Hamamoto", AssignedRaces = new string[] { "elite_opp_3_drag",
+    "elite_opp_3_drift",
+    "elite_opp_3_grip",
+    "elite_opp_3_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_004", Name = "Takeshi Tatsumi", AssignedRaces = new string[] { "elite_opp_4_drag",
+    "elite_opp_4_drift",
+    "elite_opp_4_grip",
+    "elite_opp_4_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_005", Name = "Ryota Iwahara", AssignedRaces = new string[] { "elite_opp_5_drag",
+    "elite_opp_5_drift",
+    "elite_opp_5_grip",
+    "elite_opp_5_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_006", Name = "Shiheru Mitani", AssignedRaces = new string[] { "No Races Found"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_007", Name = "Takejiro Okuda", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_008", Name = "Hide Okui", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_009", Name = "Masao Hasekura", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_010", Name = "Minoru Higashiyama", AssignedRaces = new string[] { "No Races Found" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_011", Name = "Hitoshi Morie", AssignedRaces = new string[] {"elite_opp_11_drag",
+    "elite_opp_11_drift",
+    "elite_opp_11_grip",
+    "elite_opp_11_sc" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_012", Name = "Nobu Sawayama", AssignedRaces = new string[] {"elite_opp_12_drag",
+    "elite_opp_12_drift",
+    "elite_opp_12_grip",
+    "elite_opp_12_sc" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_013", Name = "Antoine Gaskins", AssignedRaces = new string[] { "elite_opp_13_drag",
+    "elite_opp_13_drift",
+    "elite_opp_13_grip",
+    "elite_opp_13_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_014", Name = "Tobias Sachenbacher", AssignedRaces = new string[] { "elite_opp_14_drag",
+    "elite_opp_14_drift",
+    "elite_opp_14_grip",
+    "elite_opp_14_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_015", Name = "Kelvin Coates", AssignedRaces = new string[] { "elite_opp_15_drag",
+    "elite_opp_15_drift",
+    "elite_opp_15_grip",
+    "elite_opp_15_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_016", Name = "Andreas Romanoff", AssignedRaces = new string[] {"elite_opp_16_drag",
+    "elite_opp_16_drift",
+    "elite_opp_16_grip",
+    "elite_opp_16_sc" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_017", Name = "Armand Walker", AssignedRaces = new string[] { "elite_opp_17_drag",
+    "elite_opp_17_drift",
+    "elite_opp_17_grip",
+    "elite_opp_17_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_018", Name = "Ulrik Armstrong", AssignedRaces = new string[] { "elite_opp_18_drag",
+    "elite_opp_18_drift",
+    "elite_opp_18_grip",
+    "elite_opp_18_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_019", Name = "Rudolph Reese", AssignedRaces = new string[] {"elite_opp_19_drag",
+    "elite_opp_19_drift",
+    "elite_opp_19_grip",
+    "elite_opp_19_sc" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_020", Name = "Tristan Christopher", AssignedRaces = new string[] { "elite_opp_20_drag",
+    "elite_opp_20_drift",
+    "elite_opp_20_grip",
+    "elite_opp_20_sc"}
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_021", Name = "Derek Anderson", AssignedRaces = new string[] { "elite_opp_21_drag" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_022", Name = "Josh Mason", AssignedRaces = new string[] { "elite_opp_22_drag" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_023", Name = "Corey Digger", AssignedRaces = new string[] { "elite_opp_26_drag" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_024", Name = "Brad Adams", AssignedRaces = new string[] { "elite_opp_24_drag" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_025", Name = "Cole Smith", AssignedRaces = new string[] { "elite_opp_25_drag" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_026", Name = "Jimmy Sway", AssignedRaces = new string[] { "elite_opp_26_drag", "elite_opp_26_drag" }
+},
+new RacerProfile
+{
+    Tag = "ELITENAME_027", Name = "Tony Smalls", AssignedRaces = new string[] { "elite_opp_27_grip" }
+},
+
+// DDay Racers
+new RacerProfile
+{
+    Tag = "DDAY_OPP_01", Name = "Eddie Cargo", AssignedRaces = new string[] { "dday_opp_1_grip" }
+},
+new RacerProfile
+{
+    Tag = "DDAY_OPP_02", Name = "Benny Gold", AssignedRaces = new string[] { "dday_opp_2_grip" }
+},
+new RacerProfile
+{
+    Tag = "DDAY_OPP_03", Name = "Samantha Cross", AssignedRaces = new string[] { "dday_opp_3_grip" }
+},
+new RacerProfile
+{
+    Tag = "DDAY_OPP_04", Name = "Bill Vein", AssignedRaces = new string[] { "dday_opp_4_grip" }
+},
+new RacerProfile
+{
+    Tag = "DDAY_OPP_05", Name = "Mark Mann", AssignedRaces = new string[] { "dday_opp_5_grip" }
+},
+new RacerProfile
+{
+    Tag = "DDAY_OPP_06", Name = "Roger Sole", AssignedRaces = new string[] { "dday_opp_6_grip" }
+},
+new RacerProfile
+{
+    Tag = "DDAY_OPP_07", Name = "Wilson Wong", AssignedRaces = new string[] { "dday_opp_7_grip" }
+},
+
+// Drag Entourage
+new RacerProfile
+{
+    Tag = "DRAG_ENTOURAGE_1", Name = "Bradley Hunter", AssignedRaces = new string[] { "drag_entourage_1_drag" }
+},
+new RacerProfile
+{
+    Tag = "DRAG_ENTOURAGE_2", Name = "Frank Book", AssignedRaces = new string[] { "drag_entourage_2_drag" }
+},
+new RacerProfile
+{
+    Tag = "DRAG_ENTOURAGE_3", Name = "Craig Wright", AssignedRaces = new string[] { "drag_entourage_3_drag" }
+},
+
+// Drift Entourage
+new RacerProfile
+{
+    Tag = "DRIFT_ENTOURAGE_1", Name = "Yoshi Suzuki", AssignedRaces = new string[] { "drift_entourage_1_drift" }
+},
+new RacerProfile
+{
+    Tag = "DRIFT_ENTOURAGE_2", Name = "Tony Manilla", AssignedRaces = new string[] { "drift_entourage_2_drift" }
+},
+new RacerProfile
+{
+    Tag = "DRIFT_ENTOURAGE_3", Name = "Vinnie Gaul", AssignedRaces = new string[] { "drift_entourage_3_drift" }
+},
+
+// Grip Entourage
+new RacerProfile
+{
+    Tag = "GRIP_ENTOURAGE_1", Name = "Rudy Chen", AssignedRaces = new string[] { "grip_entourage_1_grip" }
+},
+new RacerProfile
+{
+    Tag = "GRIP_ENTOURAGE_2", Name = "Gavin May", AssignedRaces = new string[] { "grip_entourage_2_grip" }
+},
+new RacerProfile
+{
+    Tag = "GRIP_ENTOURAGE_3", Name = "Henrik Dehn", AssignedRaces = new string[] { "grip_entourage_3_grip" }
+},
+
+// Kings
+new RacerProfile
+{
+    Tag = "Drag King", Name = "Karol Monroe", AssignedRaces = new string[] { "drag_king" }
+},
+new RacerProfile
+{
+    Tag = "Drift King", Name = "Aki Kimura", AssignedRaces = new string[] { "drift_king"}
+},
+new RacerProfile
+{
+    Tag = "Shadow King", Name = "Ryo Watanabe", AssignedRaces = new string[] { "showdown_king_final_drag",
+    "showdown_king_final_drift",
+    "showdown_king_final_grip",
+    "showdown_king_final_sc",
+    "showdown_king_playable"}
+},
+new RacerProfile
+{
+    Tag = "Speed King", Name = "Nate Denver", AssignedRaces = new string[] { "sc_king"}
+},
+new RacerProfile
+{
+    Tag = "Grip King", Name = "Ray Krieger", AssignedRaces = new string[] {"grip_king" }
+},
+
+// Showdown Entourage
+new RacerProfile
+{
+    Tag = "SHOWDOWN_ENTOURAGE_1", Name = "Joe Tackett", AssignedRaces = new string[] {"showdown_entourage_1_drag",
+    "showdown_entourage_1_grip",
+    "showdown_entourage_1_sc" }
+},
+new RacerProfile
+{
+    Tag = "SHOWDOWN_ENTOURAGE_2", Name = "Takeshi Sato", AssignedRaces = new string[] { "showdown_entourage_2_drag",
+    "showdown_entourage_2_drift",
+    "showdown_entourage_2_grip",
+    "showdown_entourage_2_sc"}
+},
+new RacerProfile
+{
+    Tag = "SHOWDOWN_ENTOURAGE_3", Name = "Ivan Tarkovsky", AssignedRaces = new string[] { "showdown_entourage_3_drag",
+    "showdown_entourage_3_grip",
+    "showdown_entourage_3_sc"}
+},
+new RacerProfile
+{
+    Tag = "SHOWDOWN_ENTOURAGE_4", Name = "Paul Trask", AssignedRaces = new string[] {"showdown_entourage_4_drag",
+    "showdown_entourage_4_grip",
+    "showdown_entourage_4_sc" }
+},
+
+// Speed Entourage
+new RacerProfile
+{
+    Tag = "SC_ENTOURAGE_1", Name = "Paulo Cruz", AssignedRaces = new string[] { "sc_entourage_1_sc" }
+},
+new RacerProfile
+{
+    Tag = "SC_ENTOURAGE_2", Name = "JP Laurent", AssignedRaces = new string[] { "sc_entourage_2_sc" }
+},
+new RacerProfile
+{
+    Tag = "SC_ENTOURAGE_3", Name = "Carlos Galliano", AssignedRaces = new string[] { "sc_entourage_3_sc" }
+},
+
+/*{ "RACERNAME_002", "Paul Ko" },
 { "RACERNAME_003", "Don Berry" },
 { "RACERNAME_004", "Pete Carter" },
 { "RACERNAME_005", "Eddy Spencer" },
@@ -180,10 +1330,10 @@ namespace EA_MD5_hasher.NFS_ProStreet
 { "SC_ENTOURAGE_2", "JP Laurent" },
 { "SC_ENTOURAGE_3", "Carlos Galliano" }
     };
+*/
+};
 
-
-
-        Dictionary<string, string> presetCarMap = new Dictionary<string, string>()
+        public static Dictionary<string, string> presetCarMap = new Dictionary<string, string>()
 {
     // Temp / Challenge Presets
     { "ch_t3_inf_drag", "challenger71" },
@@ -473,327 +1623,331 @@ namespace EA_MD5_hasher.NFS_ProStreet
     { "dday_opp_7_grip", "civichb" },
 
     // Elite Opponents - Drag
-    { "elite_opp_1_drag", "Elite Opponent 1 (Drag)" },
-    { "elite_opp_11_drag", "Elite Opponent 11 (Drag)" },
-    { "elite_opp_12_drag", "Elite Opponent 12 (Drag)" },
-    { "elite_opp_13_drag", "Elite Opponent 13 (Drag)" },
-    { "elite_opp_14_drag", "Elite Opponent 14 (Drag)" },
-    { "elite_opp_15_drag", "Elite Opponent 15 (Drag)" },
-    { "elite_opp_16_drag", "Elite Opponent 16 (Drag)" },
-    { "elite_opp_17_drag", "Elite Opponent 17 (Drag)" },
-    { "elite_opp_18_drag", "Elite Opponent 18 (Drag)" },
-    { "elite_opp_19_drag", "Elite Opponent 19 (Drag)" },
-    { "elite_opp_2_drag", "Elite Opponent 2 (Drag)" },
-    { "elite_opp_20_drag", "Elite Opponent 20 (Drag)" },
-    { "elite_opp_21_drag", "Elite Opponent 21 (Drag)" },
-    { "elite_opp_22_drag", "Elite Opponent 22 (Drag)" },
-    { "elite_opp_23_drag", "Elite Opponent 23 (Drag)" },
-    { "elite_opp_24_drag", "Elite Opponent 24 (Drag)" },
-    { "elite_opp_25_drag", "Elite Opponent 25 (Drag)" },
-    { "elite_opp_26_drag", "Elite Opponent 26 (Drag)" },
-    { "elite_opp_3_drag", "Elite Opponent 3 (Drag)" },
-    { "elite_opp_4_drag", "Elite Opponent 4 (Drag)" },
-    { "elite_opp_5_drag", "Elite Opponent 5 (Drag)" },
+    { "elite_opp_1_drag", "rx7" },
+    { "elite_opp_11_drag", "350z" },
+    { "elite_opp_12_drag", "240sx" },
+    { "elite_opp_13_drag", "bmwm3e92" },
+    { "elite_opp_14_drag", "gtrproto" },
+    { "elite_opp_15_drag", "ctsv" },
+    { "elite_opp_16_drag", "corvettez06" },
+    { "elite_opp_17_drag", "mustangshlbyn" },
+    { "elite_opp_18_drag", "mustanggt" },
+    { "elite_opp_19_drag", "viper" },
+    { "elite_opp_2_drag", "silvia" },
+    { "elite_opp_20_drag", "fordgt" },
+    { "elite_opp_21_drag", "charger69" },
+    { "elite_opp_22_drag", "mustangshlbyn" },
+    { "elite_opp_23_drag", "challenger71" },
+    { "elite_opp_24_drag", "cuda" },
+    { "elite_opp_25_drag", "camaro" },
+    { "elite_opp_26_drag", "gto" },
+    { "elite_opp_3_drag", "skyline" },
+    { "elite_opp_4_drag", "rx8" },
+    { "elite_opp_5_drag", "supra" },
 
     // Elite Opponents - Drift
-    { "elite_opp_1_drift", "Elite Opponent 1 (Drift)" },
-    { "elite_opp_11_drift", "Elite Opponent 11 (Drift)" },
-    { "elite_opp_12_drift", "Elite Opponent 12 (Drift)" },
-    { "elite_opp_13_drift", "Elite Opponent 13 (Drift)" },
-    { "elite_opp_14_drift", "Elite Opponent 14 (Drift)" },
-    { "elite_opp_15_drift", "Elite Opponent 15 (Drift)" },
-    { "elite_opp_16_drift", "Elite Opponent 16 (Drift)" },
-    { "elite_opp_17_drift", "Elite Opponent 17 (Drift)" },
-    { "elite_opp_18_drift", "Elite Opponent 18 (Drift)" },
-    { "elite_opp_19_drift", "Elite Opponent 19 (Drift)" },
-    { "elite_opp_2_drift", "Elite Opponent 2 (Drift)" },
-    { "elite_opp_20_drift", "Elite Opponent 20 (Drift)" },
-    { "elite_opp_3_drift", "Elite Opponent 3 (Drift)" },
-    { "elite_opp_4_drift", "Elite Opponent 4 (Drift)" },
-    { "elite_opp_5_drift", "Elite Opponent 5 (Drift)" },
+    { "elite_opp_1_drift", "240sx" },
+    { "elite_opp_11_drift", "rx7" },
+    { "elite_opp_12_drift", "supra" },
+    { "elite_opp_13_drift", "viper" },
+    { "elite_opp_14_drift", "mustangshlbyn" },
+    { "elite_opp_15_drift", "gto" },
+    { "elite_opp_16_drift", "mustangshlbyn" },
+    { "elite_opp_17_drift", "viper" },
+    { "elite_opp_18_drift", "cuda" },
+    { "elite_opp_19_drift", "corvettez06" },
+    { "elite_opp_2_drift", "rx8" },
+    { "elite_opp_20_drift", "viper" },
+    { "elite_opp_3_drift", "corolla" },
+    { "elite_opp_4_drift", "350z" },
+    { "elite_opp_5_drift", "silvia" },
 
     // Elite Opponents - Grip
-    { "elite_opp_1_grip", "Elite Opponent 1 (Grip)" },
-    { "elite_opp_11_grip", "Elite Opponent 11 (Grip)" },
-    { "elite_opp_12_grip", "Elite Opponent 12 (Grip)" },
-    { "elite_opp_13_grip", "Elite Opponent 13 (Grip)" },
-    { "elite_opp_14_grip", "Elite Opponent 14 (Grip)" },
-    { "elite_opp_15_grip", "Elite Opponent 15 (Grip)" },
-    { "elite_opp_16_grip", "Elite Opponent 16 (Grip)" },
-    { "elite_opp_17_grip", "Elite Opponent 17 (Grip)" },
-    { "elite_opp_18_grip", "Elite Opponent 18 (Grip)" },
-    { "elite_opp_19_grip", "Elite Opponent 19 (Grip)" },
-    { "elite_opp_2_grip", "Elite Opponent 2 (Grip)" },
-    { "elite_opp_20_grip", "Elite Opponent 20 (Grip)" },
-    { "elite_opp_27_grip", "Elite Opponent 27 (Grip)" },
-    { "elite_opp_3_grip", "Elite Opponent 3 (Grip)" },
-    { "elite_opp_4_grip", "Elite Opponent 4 (Grip)" },
-    { "elite_opp_5_grip", "Elite Opponent 5 (Grip)" },
+    { "elite_opp_1_grip", "gtrproto" },
+    { "elite_opp_11_grip", "bmwm3" },
+    { "elite_opp_12_grip", "s3" },
+    { "elite_opp_13_grip", "caymans" },
+    { "elite_opp_14_grip", "997tt" },
+    { "elite_opp_15_grip", "viper" },
+    { "elite_opp_16_grip", "murcielago640" },
+    { "elite_opp_17_grip", "fordgt" },
+    { "elite_opp_18_grip", "lancerevox" },
+    { "elite_opp_19_grip", "bmwm3e92" },
+    { "elite_opp_2_grip", "focusst" },
+    { "elite_opp_20_grip", "corvettez06" },
+    { "elite_opp_27_grip", "r32" },
+    { "elite_opp_3_grip", "gtrproto" },
+    { "elite_opp_4_grip", "skyline" },
+    { "elite_opp_5_grip", "lancerevo9" },
 
     // Elite Opponents - Speed Challenge
-    { "elite_opp_14_sc", "Elite Opponent 14 (Speed Challenge)" },
-    { "elite_opp_15_sc", "Elite Opponent 15 (Speed Challenge)" },
-    { "elite_opp_16_sc", "Elite Opponent 16 (Speed Challenge)" },
-    { "elite_opp_17_sc", "Elite Opponent 17 (Speed Challenge)" },
-    { "elite_opp_18_sc", "Elite Opponent 18 (Speed Challenge)" },
-    { "elite_opp_19_sc", "Elite Opponent 19 (Speed Challenge)" },
-    { "elite_opp_2_sc", "Elite Opponent 2 (Speed Challenge)" },
-    { "elite_opp_20_sc", "Elite Opponent 20 (Speed Challenge)" },
-    { "elite_opp_3_sc", "Elite Opponent 3 (Speed Challenge)" },
-    { "elite_opp_4_sc", "Elite Opponent 4 (Speed Challenge)" },
-    { "elite_opp_5_sc", "Elite Opponent 5 (Speed Challenge)" },
+    { "elite_opp_1_sc", "lancerevox" },
+    { "elite_opp_11_sc", "gtrproto" },
+    { "elite_opp_12_sc", "skyline" },
+    { "elite_opp_13_sc", "murcielago640" },
+    { "elite_opp_14_sc", "zonda" },
+    { "elite_opp_15_sc", "mustangshlbyn" },
+    { "elite_opp_16_sc", "997tt" },
+    { "elite_opp_17_sc", "corvettez06" },
+    { "elite_opp_18_sc", "viper" },
+    { "elite_opp_19_sc", "fordgt" },
+    { "elite_opp_2_sc", "gtrproto" },
+    { "elite_opp_20_sc", "mustanggt" },
+    { "elite_opp_3_sc", "supra" },
+    { "elite_opp_4_sc", "350z" },
+    { "elite_opp_5_sc", "rx7" },
 
     // HD / Race Day Opponents - Drag
-    { "hd_opp_1_drag", "Race Day Opponent 1 (Drag)" },
-    { "hd_opp_10_drag", "Race Day Opponent 10 (Drag)" },
-    { "hd_opp_11_drag", "Race Day Opponent 11 (Drag)" },
-    { "hd_opp_12_drag", "Race Day Opponent 12 (Drag)" },
-    { "hd_opp_13_drag", "Race Day Opponent 13 (Drag)" },
-    { "hd_opp_14_drag", "Race Day Opponent 14 (Drag)" },
-    { "hd_opp_15_drag", "Race Day Opponent 15 (Drag)" },
-    { "hd_opp_2_drag", "Race Day Opponent 2 (Drag)" },
-    { "hd_opp_3_drag", "Race Day Opponent 3 (Drag)" },
-    { "hd_opp_4_drag", "Race Day Opponent 4 (Drag)" },
-    { "hd_opp_5_drag", "Race Day Opponent 5 (Drag)" },
-    { "hd_opp_6_drag", "Race Day Opponent 6 (Drag)" },
-    { "hd_opp_7_drag", "Race Day Opponent 7 (Drag)" },
-    { "hd_opp_8_drag", "Race Day Opponent 8 (Drag)" },
-    { "hd_opp_9_drag", "Race Day Opponent 9 (Drag)" },
+    { "hd_opp_1_drag", "rsx" },
+    { "hd_opp_10_drag", "rs4" },
+    { "hd_opp_11_drag", "camaron" },
+    { "hd_opp_12_drag", "mustang03" },
+    { "hd_opp_13_drag", "is350" },
+    { "hd_opp_14_drag", "integratyper" },
+    { "hd_opp_15_drag", "viper" },
+    { "hd_opp_2_drag", "cobaltss" },
+    { "hd_opp_3_drag", "rsx" },
+    { "hd_opp_4_drag", "s3" },
+    { "hd_opp_5_drag", "s3" },
+    { "hd_opp_6_drag", "cosworth" },
+    { "hd_opp_7_drag", "integrals" },
+    { "hd_opp_8_drag", "civicsi" },
+    { "hd_opp_9_drag", "corvette67" },
 
     // HD / Race Day Opponents - Drift
-    { "hd_opp_1_drift", "Race Day Opponent 1 (Drift)" },
-    { "hd_opp_10_drift", "Race Day Opponent 10 (Drift)" },
-    { "hd_opp_11_drift", "Race Day Opponent 11 (Drift)" },
-    { "hd_opp_12_drift", "Race Day Opponent 12 (Drift)" },
-    { "hd_opp_13_drift", "Race Day Opponent 13 (Drift)" },
-    { "hd_opp_14_drift", "Race Day Opponent 14 (Drift)" },
-    { "hd_opp_15_drift", "Race Day Opponent 15 (Drift)" },
-    { "hd_opp_2_drift", "Race Day Opponent 2 (Drift)" },
-    { "hd_opp_3_drift", "Race Day Opponent 3 (Drift)" },
-    { "hd_opp_4_drift", "Race Day Opponent 4 (Drift)" },
-    { "hd_opp_5_drift", "Race Day Opponent 5 (Drift)" },
-    { "hd_opp_6_drift", "Race Day Opponent 6 (Drift)" },
-    { "hd_opp_7_drift", "Race Day Opponent 7 (Drift)" },
-    { "hd_opp_8_drift", "Race Day Opponent 8 (Drift)" },
-    { "hd_opp_9_drift", "Race Day Opponent 9 (Drift)" },
+    { "hd_opp_1_drift", "charger69" },
+    { "hd_opp_10_drift", "is350" },
+    { "hd_opp_11_drift", "bmwm3e92" },
+    { "hd_opp_12_drift", "camaron" },
+    { "hd_opp_13_drift", "corvette" },
+    { "hd_opp_14_drift", "nsx" },
+    { "hd_opp_15_drift", "fordgt" },
+    { "hd_opp_2_drift", "mustanggt" },
+    { "hd_opp_3_drift", "240sx" },
+    { "hd_opp_4_drift", "bmwm3" },
+    { "hd_opp_5_drift", "camaro" },
+    { "hd_opp_6_drift", "chevelle" },
+    { "hd_opp_7_drift", "corolla" },
+    { "hd_opp_8_drift", "solsticegxp" },
+    { "hd_opp_9_drift", "solsticegxp" },
 
     // HD / Race Day Opponents - Grip
-    { "hd_opp_1_grip", "Race Day Opponent 1 (Grip)" },
-    { "hd_opp_10_grip", "Race Day Opponent 10 (Grip)" },
-    { "hd_opp_11_grip", "Race Day Opponent 11 (Grip)" },
-    { "hd_opp_12_grip", "Race Day Opponent 12 (Grip)" },
-    { "hd_opp_13_grip", "Race Day Opponent 13 (Grip)" },
-    { "hd_opp_14_grip", "Race Day Opponent 14 (Grip)" },
-    { "hd_opp_15_grip", "Race Day Opponent 15 (Grip)" },
-    { "hd_opp_2_grip", "Race Day Opponent 2 (Grip)" },
-    { "hd_opp_3_grip", "Race Day Opponent 3 (Grip)" },
-    { "hd_opp_4_grip", "Race Day Opponent 4 (Grip)" },
-    { "hd_opp_5_grip", "Race Day Opponent 5 (Grip)" },
-    { "hd_opp_6_grip", "Race Day Opponent 6 (Grip)" },
-    { "hd_opp_7_grip", "Race Day Opponent 7 (Grip)" },
-    { "hd_opp_8_grip", "Race Day Opponent 8 (Grip)" },
-    { "hd_opp_9_grip", "Race Day Opponent 9 (Grip)" },
+    { "hd_opp_1_grip", "corvette67" },
+    { "hd_opp_10_grip", "integratyper" },
+    { "hd_opp_11_grip", "rs4" },
+    { "hd_opp_12_grip", "bmwmz4" },
+    { "hd_opp_13_grip", "ctsv" },
+    { "hd_opp_14_grip", "ttn" },
+    { "hd_opp_15_grip", "997gt2" },
+    { "hd_opp_2_grip", "mustangshlbyo" },
+    { "hd_opp_3_grip", "rsx" },
+    { "hd_opp_4_grip", "rsx" },
+    { "hd_opp_5_grip", "corvette67" },
+    { "hd_opp_6_grip", "civicsi" },
+    { "hd_opp_7_grip", "s3" },
+    { "hd_opp_8_grip", "integrals" },
+    { "hd_opp_9_grip", "cuda" },
 
     // HD / Race Day Opponents - Speed Challenge
-    { "hd_opp_1_sc", "Race Day Opponent 1 (Speed Challenge)" },
-    { "hd_opp_10_sc", "Race Day Opponent 10 (Speed Challenge)" },
-    { "hd_opp_11_sc", "Race Day Opponent 11 (Speed Challenge)" },
-    { "hd_opp_12_sc", "Race Day Opponent 12 (Speed Challenge)" },
-    { "hd_opp_13_sc", "Race Day Opponent 13 (Speed Challenge)" },
-    { "hd_opp_14_sc", "Race Day Opponent 14 (Speed Challenge)" },
-    { "hd_opp_15_sc", "Race Day Opponent 15 (Speed Challenge)" },
-    { "hd_opp_2_sc", "Race Day Opponent 2 (Speed Challenge)" },
-    { "hd_opp_3_sc", "Race Day Opponent 3 (Speed Challenge)" },
-    { "hd_opp_4_sc", "Race Day Opponent 4 (Speed Challenge)" },
-    { "hd_opp_5_sc", "Race Day Opponent 5 (Speed Challenge)" },
-    { "hd_opp_6_sc", "Race Day Opponent 6 (Speed Challenge)" },
-    { "hd_opp_7_sc", "Race Day Opponent 7 (Speed Challenge)" },
-    { "hd_opp_8_sc", "Race Day Opponent 8 (Speed Challenge)" },
-    { "hd_opp_9_sc", "Race Day Opponent 9 (Speed Challenge)" },
+    { "hd_opp_1_sc", "gto65" },
+    { "hd_opp_10_sc", "bmwm3e92" },
+    { "hd_opp_11_sc", "ttn" },
+    { "hd_opp_12_sc", "bmwmz4" },
+    { "hd_opp_13_sc", "solsticegxp" },
+    { "hd_opp_14_sc", "bmwmz4" },
+    { "hd_opp_15_sc", "r32" },
+    { "hd_opp_2_sc", "corvette67" },
+    { "hd_opp_3_sc", "corvette67" },
+    { "hd_opp_4_sc", "s3" },
+    { "hd_opp_5_sc", "charger69" },
+    { "hd_opp_6_sc", "integrals" },
+    { "hd_opp_7_sc", "cobaltss" },
+    { "hd_opp_8_sc", "mustangshlbyo" },
+    { "hd_opp_9_sc", "civicsi" },
 
     // Generic Opponents - Drag
-    { "opp_0_drag", "Standard Opponent 0 (Drag)" },
-    { "opp_1_drag", "Standard Opponent 1 (Drag)" },
-    { "opp_10_drag", "Standard Opponent 10 (Drag)" },
-    { "opp_11_drag", "Standard Opponent 11 (Drag)" },
-    { "opp_12_drag", "Standard Opponent 12 (Drag)" },
-    { "opp_13_drag", "Standard Opponent 13 (Drag)" },
-    { "opp_14_drag", "Standard Opponent 14 (Drag)" },
-    { "opp_2_drag", "Standard Opponent 2 (Drag)" },
-    { "opp_20_drag", "Standard Opponent 20 (Drag)" },
-    { "opp_21_drag", "Standard Opponent 21 (Drag)" },
-    { "opp_22_drag", "Standard Opponent 22 (Drag)" },
-    { "opp_23_drag", "Standard Opponent 23 (Drag)" },
-    { "opp_24_drag", "Standard Opponent 24 (Drag)" },
-    { "opp_25_drag", "Standard Opponent 25 (Drag)" },
-    { "opp_26_drag", "Standard Opponent 26 (Drag)" },
-    { "opp_27_drag", "Standard Opponent 27 (Drag)" },
-    { "opp_28_drag", "Standard Opponent 28 (Drag)" },
-    { "opp_29_drag", "Standard Opponent 29 (Drag)" },
-    { "opp_3_drag", "Standard Opponent 3 (Drag)" },
-    { "opp_30_drag", "Standard Opponent 30 (Drag)" },
-    { "opp_31_drag", "Standard Opponent 31 (Drag)" },
-    { "opp_32_drag", "Standard Opponent 32 (Drag)" },
-    { "opp_33_drag", "Standard Opponent 33 (Drag)" },
-    { "opp_34_drag", "Standard Opponent 34 (Drag)" },
-    { "opp_4_drag", "Standard Opponent 4 (Drag)" },
-    { "opp_41_drag", "Standard Opponent 41 (Drag)" },
-    { "opp_42_drag", "Standard Opponent 42 (Drag)" },
-    { "opp_43_drag", "Standard Opponent 43 (Drag)" },
-    { "opp_44_drag", "Standard Opponent 44 (Drag)" },
-    { "opp_45_drag", "Standard Opponent 45 (Drag)" },
-    { "opp_46_drag", "Standard Opponent 46 (Drag)" },
-    { "opp_47_drag", "Standard Opponent 47 (Drag)" },
-    { "opp_48_drag", "Standard Opponent 48 (Drag)" },
-    { "opp_49_drag", "Standard Opponent 49 (Drag)" },
-    { "opp_5_drag", "Standard Opponent 5 (Drag)" },
-    { "opp_50_drag", "Standard Opponent 50 (Drag)" },
-    { "opp_51_drag", "Standard Opponent 51 (Drag)" },
-    { "opp_52_drag", "Standard Opponent 52 (Drag)" },
-    { "opp_53_drag", "Standard Opponent 53 (Drag)" },
-    { "opp_54_drag", "Standard Opponent 54 (Drag)" },
-    { "opp_6_drag", "Standard Opponent 6 (Drag)" },
-    { "opp_7_drag", "Standard Opponent 7 (Drag)" },
-    { "opp_8_drag", "Standard Opponent 8 (Drag)" },
-    { "opp_9_drag", "Standard Opponent 9 (Drag)" },
+    { "opp_0_drag", "s3" },
+    { "opp_1_drag", "gti" },
+    { "opp_10_drag", "gti" },
+    { "opp_11_drag", "gti" },
+    { "opp_12_drag", "240sx" },
+    { "opp_13_drag", "s3" },
+    { "opp_14_drag", "s3" },
+    { "opp_2_drag", "s3" },
+    { "opp_20_drag", "350z" },
+    { "opp_21_drag", "mazdaspeed3" },
+    { "opp_22_drag", "eclipse" },
+    { "opp_23_drag", "supra" },
+    { "opp_24_drag", "eclipse" },
+    { "opp_25_drag", "eclipse" },
+    { "opp_26_drag", "silvia" },
+    { "opp_27_drag", "civichb" },
+    { "opp_28_drag", "civichb" },
+    { "opp_29_drag", "mazdaspeed3" },
+    { "opp_3_drag", "civichb" },
+    { "opp_30_drag", "g35" },
+    { "opp_31_drag", "supra" },
+    { "opp_32_drag", "350z" },
+    { "opp_33_drag", "lancerevo9" },
+    { "opp_34_drag", "supra" },
+    { "opp_4_drag", "gto65" },
+    { "opp_41_drag", "g35" },
+    { "opp_42_drag", "civichb" },
+    { "opp_43_drag", "rx7" },
+    { "opp_44_drag", "lancerevo9" },
+    { "opp_45_drag", "supra" },
+    { "opp_46_drag", "focusst" },
+    { "opp_47_drag", "eclipse" },
+    { "opp_48_drag", "cuda" },
+    { "opp_49_drag", "gto" },
+    { "opp_5_drag", "camaro" },
+    { "opp_50_drag", "bmwm3" },
+    { "opp_51_drag", "cobaltss" },
+    { "opp_52_drag", "chevelle" },
+    { "opp_53_drag", "camaro" },
+    { "opp_54_drag", "corvette" },
+    { "opp_6_drag", "civichb" },
+    { "opp_7_drag", "240sx" },
+    { "opp_8_drag", "240sx" },
+    { "opp_9_drag", "civichb" },
 
     // Generic Opponents - Drift
-    { "opp_0_drift", "Standard Opponent 0 (Drift)" },
-    { "opp_1_drift", "Standard Opponent 1 (Drift)" },
-    { "opp_10_drift", "Standard Opponent 10 (Drift)" },
-    { "opp_11_drift", "Standard Opponent 11 (Drift)" },
-    { "opp_12_drift", "Standard Opponent 12 (Drift)" },
-    { "opp_13_drift", "Standard Opponent 13 (Drift)" },
-    { "opp_14_drift", "Standard Opponent 14 (Drift)" },
-    { "opp_2_drift", "Standard Opponent 2 (Drift)" },
-    { "opp_20_drift", "Standard Opponent 20 (Drift)" },
-    { "opp_21_drift", "Standard Opponent 21 (Drift)" },
-    { "opp_22_drift", "Standard Opponent 22 (Drift)" },
-    { "opp_23_drift", "Standard Opponent 23 (Drift)" },
-    { "opp_24_drift", "Standard Opponent 24 (Drift)" },
-    { "opp_25_drift", "Standard Opponent 25 (Drift)" },
-    { "opp_26_drift", "Standard Opponent 26 (Drift)" },
-    { "opp_27_drift", "Standard Opponent 27 (Drift)" },
-    { "opp_28_drift", "Standard Opponent 28 (Drift)" },
-    { "opp_29_drift", "Standard Opponent 29 (Drift)" },
-    { "opp_3_drift", "Standard Opponent 3 (Drift)" },
-    { "opp_30_drift", "Standard Opponent 30 (Drift)" },
-    { "opp_31_drift", "Standard Opponent 31 (Drift)" },
-    { "opp_32_drift", "Standard Opponent 32 (Drift)" },
-    { "opp_33_drift", "Standard Opponent 33 (Drift)" },
-    { "opp_34_drift", "Standard Opponent 34 (Drift)" },
-    { "opp_4_drift", "Standard Opponent 4 (Drift)" },
-    { "opp_41_drift", "Standard Opponent 41 (Drift)" },
-    { "opp_42_drift", "Standard Opponent 42 (Drift)" },
-    { "opp_43_drift", "Standard Opponent 43 (Drift)" },
-    { "opp_44_drift", "Standard Opponent 44 (Drift)" },
-    { "opp_45_drift", "Standard Opponent 45 (Drift)" },
-    { "opp_46_drift", "Standard Opponent 46 (Drift)" },
-    { "opp_47_drift", "Standard Opponent 47 (Drift)" },
-    { "opp_48_drift", "Standard Opponent 48 (Drift)" },
-    { "opp_49_drift", "Standard Opponent 49 (Drift)" },
-    { "opp_5_drift", "Standard Opponent 5 (Drift)" },
-    { "opp_50_drift", "Standard Opponent 50 (Drift)" },
-    { "opp_51_drift", "Standard Opponent 51 (Drift)" },
-    { "opp_52_drift", "Standard Opponent 52 (Drift)" },
-    { "opp_53_drift", "Standard Opponent 53 (Drift)" },
-    { "opp_54_drift", "Standard Opponent 54 (Drift)" },
-    { "opp_6_drift", "Standard Opponent 6 (Drift)" },
-    { "opp_7_drift", "Standard Opponent 7 (Drift)" },
-    { "opp_8_drift", "Standard Opponent 8 (Drift)" },
-    { "opp_9_drift", "Standard Opponent 9 (Drift)" },
+    { "opp_0_drift", "challenger71" },
+    { "opp_1_drift", "camaro" },
+    { "opp_10_drift", "gto65" },
+    { "opp_11_drift", "silvia" },
+    { "opp_12_drift", "silvia" },
+    { "opp_13_drift", "silvia" },
+    { "opp_14_drift", "240sx" },
+    { "opp_2_drift", "240sx" },
+    { "opp_20_drift", "silvia" },
+    { "opp_21_drift", "rx8" },
+    { "opp_22_drift", "silvia" },
+    { "opp_23_drift", "350z" },
+    { "opp_24_drift", "supra" },
+    { "opp_25_drift", "350z" },
+    { "opp_26_drift", "corolla" },
+    { "opp_27_drift", "240sx" },
+    { "opp_28_drift", "g35" },
+    { "opp_29_drift", "rx8" },
+    { "opp_3_drift", "corolla" },
+    { "opp_30_drift", "350z" },
+    { "opp_31_drift", "g35" },
+    { "opp_32_drift", "supra" },
+    { "opp_33_drift", "silvia" },
+    { "opp_34_drift", "corolla" },
+    { "opp_4_drift", "camaro" },
+    { "opp_41_drift", "rx7" },
+    { "opp_42_drift", "240sx" },
+    { "opp_43_drift", "silvia" },
+    { "opp_44_drift", "rx7" },
+    { "opp_45_drift", "350z" },
+    { "opp_46_drift", "supra" },
+    { "opp_47_drift", "corolla" },
+    { "opp_48_drift", "bmwm3" },
+    { "opp_49_drift", "gto" },
+    { "opp_5_drift", "corolla" },
+    { "opp_50_drift", "caymans" },
+    { "opp_51_drift", "ctsv" },
+    { "opp_52_drift", "mustanggt" },
+    { "opp_53_drift", "corvette" },
+    { "opp_54_drift", "mustanggt" },
+    { "opp_6_drift", "240sx" },
+    { "opp_7_drift", "240sx" },
+    { "opp_8_drift", "corolla" },
+    { "opp_9_drift", "camaro" },
 
     // Generic Opponents - Grip
-    { "opp_0_grip", "Standard Opponent 0 (Grip)" },
-    { "opp_1_grip", "Standard Opponent 1 (Grip)" },
-    { "opp_10_grip", "Standard Opponent 10 (Grip)" },
-    { "opp_11_grip", "Standard Opponent 11 (Grip)" },
-    { "opp_12_grip", "Standard Opponent 12 (Grip)" },
-    { "opp_13_grip", "Standard Opponent 13 (Grip)" },
-    { "opp_14_grip", "Standard Opponent 14 (Grip)" },
-    { "opp_2_grip", "Standard Opponent 2 (Grip)" },
-    { "opp_20_grip", "Standard Opponent 20 (Grip)" },
-    { "opp_21_grip", "Standard Opponent 21 (Grip)" },
-    { "opp_22_grip", "Standard Opponent 22 (Grip)" },
-    { "opp_23_grip", "Standard Opponent 23 (Grip)" },
-    { "opp_24_grip", "Standard Opponent 24 (Grip)" },
-    { "opp_25_grip", "Standard Opponent 25 (Grip)" },
-    { "opp_26_grip", "Standard Opponent 26 (Grip)" },
-    { "opp_27_grip", "Standard Opponent 27 (Grip)" },
-    { "opp_28_grip", "Standard Opponent 28 (Grip)" },
-    { "opp_29_grip", "Standard Opponent 29 (Grip)" },
-    { "opp_3_grip", "Standard Opponent 3 (Grip)" },
-    { "opp_30_grip", "Standard Opponent 30 (Grip)" },
-    { "opp_31_grip", "Standard Opponent 31 (Grip)" },
-    { "opp_32_grip", "Standard Opponent 32 (Grip)" },
-    { "opp_33_grip", "Standard Opponent 33 (Grip)" },
-    { "opp_34_grip", "Standard Opponent 34 (Grip)" },
-    { "opp_4_grip", "Standard Opponent 4 (Grip)" },
-    { "opp_41_grip", "Standard Opponent 41 (Grip)" },
-    { "opp_42_grip", "Standard Opponent 42 (Grip)" },
-    { "opp_43_grip", "Standard Opponent 43 (Grip)" },
-    { "opp_44_grip", "Standard Opponent 44 (Grip)" },
-    { "opp_45_grip", "Standard Opponent 45 (Grip)" },
-    { "opp_46_grip", "Standard Opponent 46 (Grip)" },
-    { "opp_47_grip", "Standard Opponent 47 (Grip)" },
-    { "opp_48_grip", "Standard Opponent 48 (Grip)" },
-    { "opp_49_grip", "Standard Opponent 49 (Grip)" },
-    { "opp_5_grip", "Standard Opponent 5 (Grip)" },
-    { "opp_50_grip", "Standard Opponent 50 (Grip)" },
-    { "opp_51_grip", "Standard Opponent 51 (Grip)" },
-    { "opp_52_grip", "Standard Opponent 52 (Grip)" },
-    { "opp_53_grip", "Standard Opponent 53 (Grip)" },
-    { "opp_54_grip", "Standard Opponent 54 (Grip)" },
-    { "opp_6_grip", "Standard Opponent 6 (Grip)" },
-    { "opp_7_grip", "Standard Opponent 7 (Grip)" },
-    { "opp_8_grip", "Standard Opponent 8 (Grip)" },
-    { "opp_9_grip", "Standard Opponent 9 (Grip)" },
+    { "opp_0_grip", "mustangshlbyo" },
+    { "opp_1_grip", "challenger71" },
+    { "opp_10_grip", "cobaltss" },
+    { "opp_11_grip", "cobaltss" },
+    { "opp_12_grip", "chevelle" },
+    { "opp_13_grip", "corolla" },
+    { "opp_14_grip", "gti" },
+    { "opp_2_grip", "charger69" },
+    { "opp_20_grip", "350z" },
+    { "opp_21_grip", "rx8" },
+    { "opp_22_grip", "lancerevo9" },
+    { "opp_23_grip", "g35" },
+    { "opp_24_grip", "mazdaspeed3" },
+    { "opp_25_grip", "lancerevo9" },
+    { "opp_26_grip", "rx8" },
+    { "opp_27_grip", "mazdaspeed3" },
+    { "opp_28_grip", "eclipse" },
+    { "opp_29_grip", "silvia" },
+    { "opp_3_grip", "chevelle" },
+    { "opp_30_grip", "supra" },
+    { "opp_31_grip", "lancerevo9" },
+    { "opp_32_grip", "supra" },
+    { "opp_33_grip", "lancerevo9" },
+    { "opp_34_grip", "350z" },
+    { "opp_4_grip", "s3" },
+    { "opp_41_grip", "imprezawrxsti" },
+    { "opp_42_grip", "lancerevo9" },
+    { "opp_43_grip", "rx7" },
+    { "opp_44_grip", "g35" },
+    { "opp_45_grip", "rx8" },
+    { "opp_46_grip", "lancerevo9" },
+    { "opp_47_grip", "imprezawrxsti" },
+    { "opp_48_grip", "bmwm3" },
+    { "opp_49_grip", "focusst" },
+    { "opp_5_grip", "corolla" },
+    { "opp_50_grip", "elise" },
+    { "opp_51_grip", "bmwm3e92" },
+    { "opp_52_grip", "mustanggt" },
+    { "opp_53_grip", "corvette" },
+    { "opp_54_grip", "caymans" },
+    { "opp_6_grip", "civichb" },
+    { "opp_7_grip", "240sx" },
+    { "opp_8_grip", "corolla" },
+    { "opp_9_grip", "charger69" },
 
     // Generic Opponents - Speed Challenge
-    { "opp_0_sc", "Standard Opponent 0 (Speed Challenge)" },
-    { "opp_1_sc", "Standard Opponent 1 (Speed Challenge)" },
-    { "opp_10_sc", "Standard Opponent 10 (Speed Challenge)" },
-    { "opp_11_sc", "Standard Opponent 11 (Speed Challenge)" },
-    { "opp_12_sc", "Standard Opponent 12 (Speed Challenge)" },
-    { "opp_13_sc", "Standard Opponent 13 (Speed Challenge)" },
-    { "opp_14_sc", "Standard Opponent 14 (Speed Challenge)" },
-    { "opp_2_sc", "Standard Opponent 2 (Speed Challenge)" },
-    { "opp_20_sc", "Standard Opponent 20 (Speed Challenge)" },
-    { "opp_21_sc", "Standard Opponent 21 (Speed Challenge)" },
-    { "opp_22_sc", "Standard Opponent 22 (Speed Challenge)" },
-    { "opp_23_sc", "Standard Opponent 23 (Speed Challenge)" },
-    { "opp_24_sc", "Standard Opponent 24 (Speed Challenge)" },
-    { "opp_25_sc", "Standard Opponent 25 (Speed Challenge)" },
-    { "opp_26_sc", "Standard Opponent 26 (Speed Challenge)" },
-    { "opp_27_sc", "Standard Opponent 27 (Speed Challenge)" },
-    { "opp_28_sc", "Standard Opponent 28 (Speed Challenge)" },
-    { "opp_29_sc", "Standard Opponent 29 (Speed Challenge)" },
-    { "opp_3_sc", "Standard Opponent 3 (Speed Challenge)" },
-    { "opp_30_sc", "Standard Opponent 30 (Speed Challenge)" },
-    { "opp_31_sc", "Standard Opponent 31 (Speed Challenge)" },
-    { "opp_32_sc", "Standard Opponent 32 (Speed Challenge)" },
-    { "opp_33_sc", "Standard Opponent 33 (Speed Challenge)" },
-    { "opp_34_sc", "Standard Opponent 34 (Speed Challenge)" },
-    { "opp_4_sc", "Standard Opponent 4 (Speed Challenge)" },
-    { "opp_41_sc", "Standard Opponent 41 (Speed Challenge)" },
-    { "opp_42_sc", "Standard Opponent 42 (Speed Challenge)" },
-    { "opp_43_sc", "Standard Opponent 43 (Speed Challenge)" },
-    { "opp_44_sc", "Standard Opponent 44 (Speed Challenge)" },
-    { "opp_45_sc", "Standard Opponent 45 (Speed Challenge)" },
-    { "opp_46_sc", "Standard Opponent 46 (Speed Challenge)" },
-    { "opp_47_sc", "Standard Opponent 47 (Speed Challenge)" },
-    { "opp_48_sc", "Standard Opponent 48 (Speed Challenge)" },
-    { "opp_49_sc", "Standard Opponent 49 (Speed Challenge)" },
-    { "opp_5_sc", "Standard Opponent 5 (Speed Challenge)" },
-    { "opp_50_sc", "Standard Opponent 50 (Speed Challenge)" },
-    { "opp_51_sc", "Standard Opponent 51 (Speed Challenge)" },
-    { "opp_52_sc", "Standard Opponent 52 (Speed Challenge)" },
-    { "opp_53_sc", "Standard Opponent 53 (Speed Challenge)" },
-    { "opp_54_sc", "Standard Opponent 54 (Speed Challenge)" },
-    { "opp_6_sc", "Standard Opponent 6 (Speed Challenge)" },
-    { "opp_7_sc", "Standard Opponent 7 (Speed Challenge)" },
-    { "opp_8_sc", "Standard Opponent 8 (Speed Challenge)" },
-    { "opp_9_sc", "Standard Opponent 9 (Speed Challenge)" },
+    { "opp_0_sc", "gto65" },
+    { "opp_1_sc", "mustangshlbyo" },
+    { "opp_10_sc", "cobaltss" },
+    { "opp_11_sc", "cobaltss" },
+    { "opp_12_sc", "rx8" },
+    { "opp_13_sc", "s4" },
+    { "opp_14_sc", "r32" },
+    { "opp_2_sc", "r32" },
+    { "opp_20_sc", "g35" },
+    { "opp_21_sc", "mazdaspeed3" },
+    { "opp_22_sc", "lancerevo9" },
+    { "opp_23_sc", "supra" },
+    { "opp_24_sc", "silvia" },
+    { "opp_25_sc", "g35" },
+    { "opp_26_sc", "240sx" },
+    { "opp_27_sc", "silvia" },
+    { "opp_28_sc", "350z" },
+    { "opp_29_sc", "civichb" },
+    { "opp_3_sc", "cosworth" },
+    { "opp_30_sc", "mazdaspeed3" },
+    { "opp_31_sc", "350z" },
+    { "opp_32_sc", "lancerevo9" },
+    { "opp_33_sc", "eclipse" },
+    { "opp_34_sc", "rx8" },
+    { "opp_4_sc", "charger69" },
+    { "opp_41_sc", "supra" },
+    { "opp_42_sc", "rx7" },
+    { "opp_43_sc", "g35" },
+    { "opp_44_sc", "lancerevo9" },
+    { "opp_45_sc", "imprezawrxsti" },
+    { "opp_46_sc", "imprezawrxsti" },
+    { "opp_47_sc", "lancerevo9" },
+    { "opp_48_sc", "elise" },
+    { "opp_49_sc", "corvette" },
+    { "opp_5_sc", "camaro" },
+    { "opp_50_sc", "gti" },
+    { "opp_51_sc", "caymans" },
+    { "opp_52_sc", "ctsv" },
+    { "opp_53_sc", "gto65" },
+    { "opp_54_sc", "bmwm3e92" },
+    { "opp_6_sc", "civichb" },
+    { "opp_7_sc", "240sx" },
+    { "opp_8_sc", "240sx" },
+    { "opp_9_sc", "charger69" },
 
     // Player Specific Presets
     { "player_ch_t1_ptl_grip_civichb", "gti" },

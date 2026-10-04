@@ -48,6 +48,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            Grab_Car_Model_ComboBox = new ComboBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(306, 38);
+            button3.Location = new Point(306, 248);
             button3.Name = "button3";
             button3.Size = new Size(111, 23);
             button3.TabIndex = 2;
@@ -114,7 +115,7 @@
             groupBox1.Controls.Add(radioButton3);
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(306, 67);
+            groupBox1.Location = new Point(306, 277);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(136, 295);
             groupBox1.TabIndex = 5;
@@ -244,7 +245,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 89);
+            label1.Location = new Point(12, 145);
             label1.Name = "label1";
             label1.Size = new Size(65, 15);
             label1.TabIndex = 6;
@@ -253,7 +254,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 74);
+            label2.Location = new Point(12, 89);
             label2.Name = "label2";
             label2.Size = new Size(72, 15);
             label2.TabIndex = 7;
@@ -277,11 +278,22 @@
             label4.TabIndex = 9;
             label4.Text = "Save Currupt:";
             // 
+            // Grab_Car_Model_ComboBox
+            // 
+            Grab_Car_Model_ComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            Grab_Car_Model_ComboBox.FormattingEnabled = true;
+            Grab_Car_Model_ComboBox.Location = new Point(12, 163);
+            Grab_Car_Model_ComboBox.Name = "Grab_Car_Model_ComboBox";
+            Grab_Car_Model_ComboBox.Size = new Size(166, 23);
+            Grab_Car_Model_ComboBox.TabIndex = 10;
+            Grab_Car_Model_ComboBox.SelectedIndexChanged += Grab_Car_Model_ComboBox_SelectedIndexChanged;
+            // 
             // NFS_ProStreet_Editor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(454, 584);
+            Controls.Add(Grab_Car_Model_ComboBox);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -321,5 +333,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private ComboBox Grab_Car_Model_ComboBox;
     }
 }

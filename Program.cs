@@ -13,7 +13,7 @@ namespace EA_MD5_hasher
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Profile_Editor());
+            Application.Run(new NFS_ProStreet_Editor());
         }
     }
 }

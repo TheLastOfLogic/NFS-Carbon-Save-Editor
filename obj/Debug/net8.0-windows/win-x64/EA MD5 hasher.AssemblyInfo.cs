@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("NFS Carbon Save Editor is a tool to modiy Vanilla GameSaves For the Best Results")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8d83c0f7de25cbf306cd21498ac88201867e85b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6452cb76f18a394d0d999e123046ccc01c10a3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NFS Carbon Save Editor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EA MD5 hasher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
